@@ -28,7 +28,7 @@ function ButtonSubway (prop) {
             <Button type={prop.btnType} variant="primary" className='btn' style={buttonStyles} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <Icon 
                     icon={prop.icon}
-                    color={prop.color}
+                    iconColor={prop.iconColor}
                     iconSize={prop.iconSize}
                 />
                 {prop.content}
