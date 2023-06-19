@@ -1,18 +1,18 @@
 import Card from 'react-bootstrap/Card';
 
-function BasicExample() {
+function CardSubway(prop) {
+
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the cards content.
+    <Card className={prop.cardClass} style={{ width: '12rem' }}>
+      <Card.Img className={prop.imgClass} variant="top" src={prop.scr} alt={prop.alt}/>
+      <Card.Body className={prop.bodyClass}>
+        <Card.Title>{prop.title}</Card.Title>
+        <Card.Text >
+          {prop.content}
         </Card.Text>
       </Card.Body>
     </Card>
   );
 }
 
-export default BasicExample;
+export default CardSubway;
