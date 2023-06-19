@@ -1,0 +1,17 @@
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-nav a:hover {
+    transition: .3s all;
+    color: var(--green-700);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--green-700);
+    font-weight: 500;
+}

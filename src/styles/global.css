@@ -1,0 +1,12 @@
+@import url(./reboot.css);
+
+:root {
+    --light: #FAFAFA;
+
+    --green-100: rgba(0, 98, 40, 0.04);
+    --green-700: #0F9246;
+    --green-900: #006228;
+
+    --yellow-800: #FFC214;
+    --yellow-900: #ffbb00;
+}
