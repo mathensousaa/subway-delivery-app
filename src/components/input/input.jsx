@@ -1,20 +1,58 @@
-import "./input.css"
-import Button from 'react-bootstrap/Button';
+import "./input.css";
+import Button from '../Button/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
 function Input (prop){
-    return(
-        <InputGroup className="mb-3">
+    const inputStyles = {
+        width: prop.inpWidth,
+        padding: prop.inpPadding,
+        border: prop.inpBorder,
+        borderRadius: prop.inpBdRadius,
+        backgroundColor: prop.inpBgColor,
+        color: prop.inpColor,
+        fontWeight: prop.inpFontWeight,
+    };
+
+    if (prop.btnType) {
+        return(
+            <InputGroup 
+            className={prop.inputClass}
+            style={inputStyles}
+            >
+            <Form.Control
+              placeholder={prop.placeholder}
+              className={prop.formName}
+            />
+            <Button 
+                btnType={prop.btnType}
+                content={prop.btnContent}
+                bgColor='var(--yellow-800)'
+                border='1px solid var(--yellow-800)'
+                color='var(--light)'
+                padding={prop.btnPadding}
+                bdRadius={prop.btnBdRadius}
+                fontWeight='700'
+                bgColorHover='var(--yellow-900)'
+                borderHover='1px solid var(--yellow-900)'      
+                >
+            </Button>
+          </InputGroup>
+        )
+    }
+    else
+     { return(
+        <InputGroup 
+        className={prop.inputClass}
+        style={inputStyles}
+        >
         <Form.Control
           placeholder={prop.placeholder}
-          className={prop.className}
+          className={prop.formName}
         />
-        <Button className="submit-btn" variant= "success" >
-          Buscar
-        </Button>
       </InputGroup>
     )
+  }
 }
 
 export default Input
