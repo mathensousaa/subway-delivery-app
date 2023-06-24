@@ -2,8 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './styles/global.css';
 import Header from './components/Header/Header';
-import Card from './components/Card/Card';
-import BMT from './assets/subs/BMT.png';
+import ImgCarousel from './components/Carousel/Carousel';
 
 function App() {
 
@@ -24,14 +23,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Card 
-        title="B.M.T Italiano"
-        scr={BMT}
-        alt="B.M.T Italiano"
-
-        cardClass="text-center"
-        bodyClass="p-0"
-      />
+      <ImgCarousel />
     </div>
   )
 }
