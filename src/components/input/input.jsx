@@ -1,4 +1,4 @@
-import "./input.css";
+import "./Input.css";
 import Button from '../Button/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -18,11 +18,13 @@ function Input (prop){
         return(
             <InputGroup 
             className={prop.inputClass}
-            style={inputStyles}
             >
             <Form.Control
               placeholder={prop.placeholder}
               className={prop.formName}
+              id={prop.inputId}
+              type={prop.type}
+              style={inputStyles}
             />
             <Button 
                 btnType={prop.btnType}
