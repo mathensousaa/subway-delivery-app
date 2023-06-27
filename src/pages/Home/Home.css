@@ -1,0 +1,29 @@
+
+section {
+    padding: var(--p-section);
+}
+
+.heroText {
+    font-weight: 600;
+    color: var(--green-900);
+    margin-top: 2rem;
+}
+
+.hero span {
+    font-size: 0.75rem;
+}
+
+.findRestaurants {
+    background-color: var(--green-900);
+    color: var(--light);
+    padding: 0;
+}
+
+.SUBS {
+    background-color: var(--light);
+    overflow: hidden;
+}
+
+.franchise {
+    background-color: var(--yellow-900);
+}
