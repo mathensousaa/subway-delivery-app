@@ -1,28 +1,27 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './styles/global.css';
-import Header from './components/Header/Header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Menu from './pages/Menu/Menu';
+import Restaurants from './pages/Restaurants/Restaurants';
+import AboutUs from './pages/AboutUs/AboutUs';
+import Carrers from './pages/Carrers/Carrers';
+import Franchise from './pages/Franchise/Franchise';
+
 
 function App () {
-
-  // const SUBs15 = [
-  //   {
-  //     id: "BMT",
-  //     name: "B.M.T Italiano",
-  //     price: "R$ 32,40",
-  //     description: " sanduíche que vai acabar com toda a sua fome. Servido em pão fresquinho, com fatias de salame, peperoni, presunto, vegetais e condimentos à sua escolha. Selecione também a bebida e sobremesa de sua preferência.",
-  //     avaible: "true",
-  //     image: "./assets/subs/BMT.png"
-  //   },
-  //   {
-
-  //   }
-  // ]
-
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/restaurants" element={<Restaurants />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/carrers" element={<Carrers />} />
+          <Route path="/franchise" element={<Franchise />} />
+        </Routes>
+    </Router>
   )
 }
 

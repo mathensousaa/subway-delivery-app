@@ -9,4 +9,13 @@
 
     --yellow-800: #FFC214;
     --yellow-900: #ffbb00;
+
+
+    --p-section: 2rem;
 }
+
+@media (max-width: 768px) {
+    :root {
+      --p-section: 1rem;
+    }
+  }
