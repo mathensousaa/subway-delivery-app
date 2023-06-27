@@ -4,7 +4,6 @@ import Hero from "../../assets/hero.jpg"
 import HeroDevices from "../../assets/heroTablet.jpg"
 import { Container, Col } from "react-bootstrap";
 import Button from "../../components/Button/Button"
-import Input from "../../components/Input/Input";
 import Sub from "../../assets/sub.png";
 import Carousel from "../../components/Carousel/Carousel";
 import Footer from "../../components/Footer/Footer";
@@ -45,16 +44,6 @@ const Home = () => {
         <Col lg={12} md={10} className="mt-4 d-flex flex-column justify-content-center align-items-center">
           <h2 className="mb-3">Encontre um restaurante</h2>
           <label htmlFor="address" className="mb-3">Insira o endereço que deseja</label>
-          <Input
-            type="text"
-            inputId="address"
-            placeholder="Endereço"
-            backgroundColor="#fff"
-
-            btnType="submit"
-            btnContent="Buscar"
-            btnPadding=".5rem 1rem"
-          />
         </Col>
         <Col className="my-4 w-100 d-flex justify-content-end">
           <img src={Sub} className="img-fluid "/>
