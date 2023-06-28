@@ -230,6 +230,3 @@ const Franchise = () => {
 };
 
 export default Franchise;
-{
-  <h5 className="custom-title"></h5>;
-}
