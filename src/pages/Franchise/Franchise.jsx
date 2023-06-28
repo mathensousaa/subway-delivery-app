@@ -35,7 +35,7 @@ const Franchise = () => {
               <h1 className="mb-3 franchiseText">
                 Já se imaginou franqueado do Subway?
               </h1>
-              <a href="/franchise">
+              <a href="/carrers">
                 <Button
                   btnType="button"
                   content="Quero ser um franqueado"
@@ -155,24 +155,26 @@ const Franchise = () => {
         </Container>
       </section>
 
-      <section  className="background-section">
+      <section className="background-section">
         <Container>
           <Row className="d-flex flex-column flex-md-row justify-content-around">
             <Col lg={6} md={12} className="mb-4 mb-md-0 p-0">
               <h1 className="steps">Próximas etapas</h1>
               <div className="stepBox">
-                <Button
-                  btnType="button"
-                  content="1. SOLICITAR UM CATÁLOGO"
-                  bgColor="rgba(0, 98, 40, 0.6)"
-                  border="1px solid var(--green-700)"
-                  color="var(--light)"
-                  padding=".75rem 2.5rem"
-                  bdRadius="200px"
-                  fontWeight="700"
-                  bgColorHover="var(--green-700)"
-                  borderHover="1px solid var(--green-900)"
-                />
+                <a href="/carrers">
+                  <Button
+                    btnType="button"
+                    content="1. SOLICITAR UM CATÁLOGO"
+                    bgColor="rgba(0, 98, 40, 0.6)"
+                    border="1px solid var(--green-700)"
+                    color="var(--light)"
+                    padding=".75rem 2.5rem"
+                    bdRadius="200px"
+                    fontWeight="700"
+                    bgColorHover="var(--green-700)"
+                    borderHover="1px solid var(--green-900)"
+                  />
+                </a>
                 <h3 className="stepText">
                   A finalidade do preenchimento deste formulário é a obtenção de
                   maiores informações sobre a oportunidade de obter uma
@@ -180,18 +182,20 @@ const Franchise = () => {
                 </h3>
               </div>
               <div className="stepBox">
-                <Button
-                  btnType="button"
-                  content="2. CANDIDATAR-SE A PROPRIETÁRIO"
-                  bgColor="rgba(0, 98, 40, 0.6)"
-                  border="1px solid var(--green-700)"
-                  color="var(--light)"
-                  padding=".75rem 2.5rem"
-                  bdRadius="200px"
-                  fontWeight="700"
-                  bgColorHover="var(--green-700)"
-                  borderHover="1px solid var(--green-900)"
-                />
+                <a href="/carrers">
+                  <Button
+                    btnType="button"
+                    content="1. SOLICITAR UM CATÁLOGO"
+                    bgColor="rgba(0, 98, 40, 0.6)"
+                    border="1px solid var(--green-700)"
+                    color="var(--light)"
+                    padding=".75rem 2.5rem"
+                    bdRadius="200px"
+                    fontWeight="700"
+                    bgColorHover="var(--green-700)"
+                    borderHover="1px solid var(--green-900)"
+                  />
+                </a>
                 <h3 className="stepText">
                   Este formulário é utilizado para adquirir uma nova franquia,
                   uma franquia adicional ou para a aquisição e transferência de

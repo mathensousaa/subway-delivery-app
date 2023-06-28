@@ -137,7 +137,7 @@ const AboutUs = () => {
               className="d-flex flex-column position-relative workfranchise p-0"
             >
               <img src={BeFranchisee} alt="Seja um Franqueado" />
-              <a href="/franchise" className="btn-overlay">
+              <a href="/carrers" className="btn-overlay">
                 <Button
                   btnType="button"
                   content="Seja um Franqueado"
