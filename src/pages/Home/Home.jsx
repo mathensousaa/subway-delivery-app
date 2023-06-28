@@ -1,12 +1,17 @@
 import "./Home.css";
 import Header from "../../components/Header/Header";
+
 import Hero from "../../assets/hero.jpg"
 import HeroDevices from "../../assets/heroTablet.jpg"
-import { Container, Col } from "react-bootstrap";
-import Button from "../../components/Button/Button"
 import Sub from "../../assets/sub.png";
+import Franchise from "../../assets/franchise.jpg"
+
+import { Container, Row, Col } from "react-bootstrap";
+import Button from "../../components/Button/Button"
+
 import Carousel from "../../components/Carousel/Carousel";
 import Footer from "../../components/Footer/Footer";
+
 
 const Home = () => {
   return (
@@ -25,7 +30,7 @@ const Home = () => {
           <a href="/menu">
             <Button
               btnType='button'
-              content='Faça seu pedido'
+              content='Peça aqui'
               bgColor='var(--yellow-800)'
               border='1px solid var(--yellow-800)'
               color='var(--light)'
@@ -52,11 +57,39 @@ const Home = () => {
 
       <section className="SUBS d-flex align-items-center flex-column">
         <h2 className="mb-5">Nossos subs</h2>
-        <Carousel />
+        <Carousel 
+          
+        />
       </section>
 
       <section className="franchise text-light">
-        <h2>Quer ter seu próprio restaurante?</h2>
+        <Row>
+          <Col lg={6} md={12} className="franchiseContent d-flex flex-column justify-content-center align-items-center">
+            <Col lg={8} md={12} className="d-flex flex-column justify-content-center">
+              <h2 className="mb-3">Quer ter seu próprio restaurante?</h2>
+              <span className="mb-3">Quando você se torna proprietário de um restaurante SUBWAY®, torna-se parte da maior rede de restaurantes do mundo e de uma das marcas mais reconhecidas globalmente. Junte-se à equipe hoje!</span>
+              <a href="/franchise">
+                <Button
+                  btnType='button'
+                  content='Seja um franqueado'
+                  bgColor='var(--green-900)'
+                  border='1px solid var(--green-900)'
+                  color='var(--light)'
+                  padding='.75rem 2.5rem'
+                  bdRadius='200px'
+                  fontWeight='700'
+
+                  bgColorHover='var(--green-700)'
+                  borderHover='1px solid var(--green-700)'
+                  colorHover='var(--light)'
+                />
+              </a>
+            </Col>
+          </Col>
+          <Col lg={6} md={12} className="d-flex justify-content-center align-items-center">
+            <img src={Franchise} className="img-fluid"/>
+          </Col>
+        </Row>
       </section>
 
       <Footer />

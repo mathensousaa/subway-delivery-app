@@ -18,4 +18,9 @@
     :root {
       --p-section: 1rem;
     }
+
+    .franchiseContent {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
   }

@@ -1,15 +1,32 @@
 import './Footer.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import Logo from "../../assets/logo.svg";
+import Button from "../Button/Button";
+import { faInstagram, faFacebook, faTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
     <footer className="bg-light text-dark py-4">
       <Container>
-        <Row>
-          <Col xs={12} md={6}>
-            <h5>Subway</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <Row className='mb-3'>
+          <Col xs={6}>
+            <a href="https://www.instagram.com/subwaybrasil/" target='_blank' rel='noreferrer'>
+              <Button 
+                border="1px var(--green-900) solid"
+                bgColor="transparent"
+                bdRadius="200px"
+                padding="none"
+
+                icon={faInstagram}
+                iconColor="var(--green-900)"
+                iconSize="xl"
+              />
+            </a>
           </Col>
+          <Col xs={6}>
+            Botao
+          </Col>
+        </Row>
           <Col xs={12} md={3}>
             <h5>Links</h5>
             <ul className="list-unstyled">
@@ -19,15 +36,6 @@ const Footer = () => {
               <li><a href="/contact">Contact</a></li>
             </ul>
           </Col>
-          <Col xs={12} md={3}>
-            <h5>Follow Us</h5>
-            <ul className="list-unstyled">
-              <li><a href="https://www.facebook.com/Subway">Facebook</a></li>
-              <li><a href="https://www.instagram.com/Subway">Instagram</a></li>
-              <li><a href="https://www.twitter.com/Subway">Twitter</a></li>
-            </ul>
-          </Col>
-        </Row>
         <hr className="my-4" />
         <p className="text-center">© {new Date().getFullYear()} Subway. All rights reserved.</p>
       </Container>
