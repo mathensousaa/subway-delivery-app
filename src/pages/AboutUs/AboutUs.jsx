@@ -13,6 +13,7 @@ const AboutUs = () => {
   return (
     <div className="content">
       <Header />
+      
       <section>
         <Container>
           <Row className="d-flex justify-content-between">
