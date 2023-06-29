@@ -8,7 +8,7 @@ import FranchiseHero from "../../assets/franchiseHero.jpg";
 import FranchiseHeroSmall from "../../assets/franchiseHeroSmall.jpg";
 import International from "../../assets/international.jpg";
 import OurChain from "../../assets/ourChain.jpg";
-import Sub from "../../assets/sub2.png";
+import Sub from "../../assets/subBackground.png";
 import OurFood from "../../assets/ourFood.jpg";
 import WannaFranchisee from "../../assets/wannaFranchisee.jpg";
 
