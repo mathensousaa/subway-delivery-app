@@ -1,5 +1,7 @@
 # **Subway**
 
+### Acesse o site por aqui: **[Subway Delivery App](https://subway-delivery-app.vercel.app)**.
+
 Este repositório contém o código-fonte do site fictício para a rede de restaurantes Subway. O projeto foi desenvolvido por Matheus de Sousa e Felipe Brigagão como parte da disciplina de Desenvolvimento Web do IFSP.
 
 ## **Resumo**
@@ -42,5 +44,5 @@ Para configurar o ambiente de desenvolvimento e executar o site localmente, siga
 2. Clone este repositório em seu ambiente local.
 3. Navegue até o diretório raiz do projeto no terminal ou prompt de comando.
 4. Execute o comando **`npm install`** para instalar todas as dependências necessárias.
-5. Após a conclusão da instalação, execute o comando **`npm start`** para iniciar o servidor de desenvolvimento.
+5. Após a conclusão da instalação, execute o comando **`npm run dev`** para iniciar o servidor de desenvolvimento.
 6. Abra o navegador e acesse **`http://localhost:3000`** para visualizar o site.
