@@ -2,6 +2,10 @@
     border: none;
 }
 
+.navbar-toggler:hover {
+    opacity: .75;
+}
+
 .navbar-toggler:focus {
     box-shadow: none;
 }
@@ -15,3 +19,17 @@
     color: var(--green-700);
     font-weight: 500;
 }
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 992px) {
+    .borderBottom {
+        border-bottom: 1px solid #DDD;
+    }
+
+    .navbar-nav {
+        padding-bottom: 1rem;
+    }
+  }

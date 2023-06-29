@@ -1,14 +1,11 @@
 import "./Home.css";
 import Header from "../../components/Header/Header";
-
 import Hero from "../../assets/hero.jpg";
 import HeroDevices from "../../assets/heroTablet.jpg";
 import Sub from "../../assets/sub.png";
 import Franchise from "../../assets/franchise.jpg";
-
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "../../components/Button/Button";
-
 import Carousel from "../../components/Carousel/Carousel";
 import Footer from "../../components/Footer/Footer";
 
