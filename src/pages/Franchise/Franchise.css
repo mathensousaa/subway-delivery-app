@@ -1,0 +1,106 @@
+.heroFranchise {
+  padding: 0;
+  background-color: #008A2D;
+  height: 50vh;
+  
+}
+
+section {
+  padding: var(--p-section);
+}
+
+.h1 {
+  color: var(--green-900);
+  text-align: left;
+  font-weight: 800;
+}
+
+.h2 {
+  color: var(--green-900);
+  text-align: left;
+  font-weight: 800;
+}
+
+.rounded-20 {
+  border-radius: 20px 20px 0 0;
+}
+
+.greenBG {
+  background-color: var(--green-900);
+}
+
+.whyText {
+  color: var(--yellow-900);
+}
+
+.custom-title {
+  color: var(--green-900);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.custom-text {
+  color: var(--green-900);
+  text-align: justify;
+}
+
+.stepBox {
+  margin-top: 1rem;
+  background-color: rgba(0, 98, 40, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.stepText {
+  color: var(--green-900);
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-top: 2rem;
+} 
+
+.applyText {
+  color: var(--green-900);
+  text-align: justify;
+  font-weight: 400;
+}
+
+.imgCol {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  
+}
+
+@media (max-width: 767.98px) {
+  .heroFranchise {
+    height: 70vh;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .apply1 {
+    font-size: 2rem;
+  }
+
+  .apply2 {
+    font-size: 2rem;
+  }
+
+  .background-image{
+    display: none;
+  }
+  
+}

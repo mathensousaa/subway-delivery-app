@@ -21,6 +21,8 @@ function ButtonSubway (prop) {
         backgroundColor: hover ? prop.bgColorHover : prop.bgColor,
         color: hover ? prop.colorHover : prop.color,
         fontWeight: prop.fontWeight,
+        width: prop.buttonSize,
+        height: prop.buttonSize,
     };
     
     if (prop.icon) {
@@ -28,7 +30,7 @@ function ButtonSubway (prop) {
             <Button type={prop.btnType} variant="primary" className='btn' style={buttonStyles} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <Icon 
                     icon={prop.icon}
-                    iconColor={prop.iconColor}
+                    iconColor={hover ? prop.iconColorHover : prop.iconColor}
                     iconSize={prop.iconSize}
                 />
                 {prop.content}

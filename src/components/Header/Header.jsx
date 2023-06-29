@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <Navbar bg="white" expand="lg">
+    <Navbar bg="white" expand="lg" sticky="top">
       <Container>
         <Navbar.Brand href="/"><img alt="Logo Subway" src={Logo} height="24"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -17,9 +17,6 @@ const Header = () => {
           <Nav className="me-auto ms-auto">
             <NavLink to="/menu" className="nav-link" activeclassname="active">
               Cardápio
-            </NavLink>
-            <NavLink to="/menu.sales" className="nav-link" activeclassname="active">
-              Promoções
             </NavLink>
             <NavLink to="/restaurants" className="nav-link" activeclassname="active">
               Restaurants

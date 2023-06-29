@@ -1,5 +1,3 @@
-@import url(./reboot.css);
-
 :root {
     --light: #FAFAFA;
 
@@ -11,11 +9,24 @@
     --yellow-900: #ffbb00;
 
 
-    --p-section: 2rem;
+    --p-section: 4rem 2rem;
+}
+
+.gradientBackground{
+  background-image: linear-gradient(rgba(0, 98, 40,0.11), rgba(255, 194, 20, 0.11));   
+}
+
+.text-light {
+  color: var(--light);
 }
 
 @media (max-width: 768px) {
     :root {
-      --p-section: 1rem;
+      --p-section: 3rem 1rem;
+    }
+
+    .franchiseContent {
+        text-align: center;
+        margin-bottom: 2rem;
     }
   }
