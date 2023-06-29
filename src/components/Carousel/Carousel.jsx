@@ -15,6 +15,7 @@ const ImgCarousel = () => {
             alt="B.M.T Italiano"
             cardClass="text-center"
             bodyClass="p-0"
+            bdRadius="16px"
           />
           <Card
             cardWidth="12rem"
@@ -23,6 +24,7 @@ const ImgCarousel = () => {
             alt="B.M.T Italiano"
             cardClass="text-center"
             bodyClass="p-0"
+            bdRadius="16px"
           />
           <Card
             cardWidth="12rem"
@@ -31,34 +33,7 @@ const ImgCarousel = () => {
             alt="B.M.T Italiano"
             cardClass="text-center"
             bodyClass="p-0"
-          />
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="d-flex align-items-center image-container">
-          <Card
-            cardWidth="12rem"
-            title="B.M.T Italiano"
-            scr={BMT}
-            alt="B.M.T Italiano"
-            cardClass="text-center"
-            bodyClass="p-0"
-          />
-          <Card
-            cardWidth="12rem"
-            title="B.M.T Italiano"
-            scr={BMT}
-            alt="B.M.T Italiano"
-            cardClass="text-center"
-            bodyClass="p-0"
-          />
-          <Card
-            cardWidth="12rem"
-            title="B.M.T Italiano"
-            scr={BMT}
-            alt="B.M.T Italiano"
-            cardClass="text-center"
-            bodyClass="p-0"
+            bdRadius="16px"
           />
         </div>
       </Carousel.Item>
@@ -71,6 +46,7 @@ const ImgCarousel = () => {
             alt="B.M.T Italiano"
             cardClass="text-center"
             bodyClass="p-0"
+            bdRadius="16px"
           />
           <Card
             cardWidth="12rem"
@@ -79,6 +55,7 @@ const ImgCarousel = () => {
             alt="B.M.T Italiano"
             cardClass="text-center"
             bodyClass="p-0"
+            bdRadius="16px"
           />
           <Card
             cardWidth="12rem"
@@ -87,6 +64,38 @@ const ImgCarousel = () => {
             alt="B.M.T Italiano"
             cardClass="text-center"
             bodyClass="p-0"
+            bdRadius="16px"
+          />
+        </div>
+      </Carousel.Item>
+      <Carousel.Item>
+        <div className="d-flex align-items-center image-container">
+          <Card
+            cardWidth="12rem"
+            title="B.M.T Italiano"
+            scr={BMT}
+            alt="B.M.T Italiano"
+            cardClass="text-center"
+            bodyClass="p-0"
+            bdRadius="16px"
+          />
+          <Card
+            cardWidth="12rem"
+            title="B.M.T Italiano"
+            scr={BMT}
+            alt="B.M.T Italiano"
+            cardClass="text-center"
+            bodyClass="p-0"
+            bdRadius="16px"
+          />
+          <Card
+            cardWidth="12rem"
+            title="B.M.T Italiano"
+            scr={BMT}
+            alt="B.M.T Italiano"
+            cardClass="text-center"
+            bodyClass="p-0"
+            bdRadius="16px"
           />
         </div>
       </Carousel.Item>

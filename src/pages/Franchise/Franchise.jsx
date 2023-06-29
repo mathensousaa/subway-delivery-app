@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "../../components/Button/Button";
 import Card from "../../components/Card/Card";
 import FranchiseHero from "../../assets/franchiseHero2.jpg";
+import FranchiseHeroSmall from "../../assets/franchiseHeroSmall.jpg";
 import International from "../../assets/international.jpg";
 import OurChain from "../../assets/ourChain.jpg";
 import Sub from "../../assets/sub2.png";
@@ -13,15 +14,15 @@ import WannaFranchisee from "../../assets/wannaFranchisee.jpg";
 
 const Franchise = () => {
   return (
-    <div className="content">
+    <div className="gradientBackground">
       <Header />
 
-      <section className="hero text-center">
-        <a href="/carrers">
-          <picture>
-            <img src={FranchiseHero} className="img-fluid" alt="Hero" />
-          </picture>
-        </a>
+      <section className="heroFranchise text-center d-flex align-items-center">
+        <picture>
+          <source srcSet={FranchiseHero} media="(min-width: 992px)" />
+          <source srcSet={FranchiseHeroSmall} media="(max-width: 768px)" />
+          <img src={FranchiseHero} className="img-fluid" alt="Hero" />
+        </picture>
       </section>
 
       <section>
@@ -30,9 +31,9 @@ const Franchise = () => {
             <Col
               lg={5}
               md={12}
-              className="d-flex flex-column justify-content-center mb-4 mb-md-0"
+              className="franchiseMain d-flex flex-column justify-content-center mb-4 mb-lg-0"
             >
-              <h1 className="mb-3 franchiseText">
+              <h1 className="h1 mb-3 franchiseText">
                 Já se imaginou franqueado do Subway?
               </h1>
               <a href="/carrers">
@@ -46,7 +47,7 @@ const Franchise = () => {
                   bdRadius="200px"
                   fontWeight="700"
                   bgColorHover="var(--green-700)"
-                  borderHover="1px solid var(--green-900)"
+                  borderHover="1px solid var(--green-700)"
                 />
               </a>
             </Col>
@@ -67,12 +68,12 @@ const Franchise = () => {
 
       <section className="greenBG">
         <Container>
-          <Row className="d-flex flex-column flex-md-row justify-content-between">
-            <Col lg={6} md={12} className="mb-4 mb-md-0 p-0">
-              <h1 className="whyText">Por que escolher a Subway?</h1>
+          <Row className="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <Col lg={6} md={12} className="mb-2">
+              <h1 className="h1 whyText">Por que escolher a Subway?</h1>
             </Col>
-            <Col lg={6} md={12} className="mb-4 mb-md-0 p-0">
-              <p className="whyDescribe">
+            <Col lg={6} md={12} className="mb-2">
+              <p className="text-light">
                 Além de ser uma empresa comprovada com custo inicial baixo, a
                 SUBWAY é continuamente classificada como a franquia nº 1.
                 Descubra por que a SUBWAY® é a sua melhor opção.
@@ -81,19 +82,18 @@ const Franchise = () => {
           </Row>
 
           <Row className="d-flex flex-column flex-md-row justify-content-between">
-            <Col lg={4} md={12} className="mb-4 mb-md-0 p-0">
+            <Col xl={4} md={12} className="cardWrapper mb-md-4">
               <Card
-                cardClass="card"
-                imgClass="img-fluid rounded-10"
+                imgClass="img-fluid rounded-20"
                 cardWidth="23rem"
-                scr={International}
+                scr={International} 
                 alt="Internacional"
+                bdRadius="20px"
                 title={
                   <h5 className="custom-title">Crescimento internacional</h5>
                 }
                 content={
                   <p className="custom-text">
-                    <br />
                     Quando você se torna um franqueado SUBWAY®, você já começa
                     ganhando, pois somos a maior rede de restaurantes do mundo e
                     uma das marcas mais reconhecidas globalmente. Além de você
@@ -104,17 +104,16 @@ const Franchise = () => {
                 }
               />
             </Col>
-            <Col lg={4} md={12} className="mb-4 mb-md-0 p-0">
+            <Col xl={4} md={12} className="cardWrapper mb-md-4">
               <Card
-                cardClass="card"
-                imgClass="img-fluid rounded-10"
+                imgClass="img-fluid rounded-20"
                 cardWidth="23rem"
                 scr={OurFood}
                 alt="Nossa Comida"
+                bdRadius="20px"
                 title={<h5 className="custom-title">Nossa comida</h5>}
                 content={
                   <p className="custom-text">
-                    <br />
                     SUBWAY® é líder de mercado em seu segmento. Os Subs, que é
                     como chamamos nossos sanduíches, são totalmente
                     personalizados ao gosto do cliente. Os pães saem quentinhos
@@ -125,28 +124,26 @@ const Franchise = () => {
                 }
               />
             </Col>
-            <Col lg={4} md={12} className="mb-4 mb-md-0 p-0">
+            <Col xl={4} md={12} className="cardWrapper mb-md-4">
               <Card
-                cardClass="card"
-                imgClass="img-fluid rounded-10"
+                imgClass="img-fluid rounded-20"
                 cardWidth="23rem"
                 scr={OurChain}
                 alt="Nossa rede de apoio"
+                bdRadius="20px"
                 title={<h5 className="custom-title">Nossa rede de apoio</h5>}
                 content={
                   <p className="custom-text">
-                    <br />
                     Quem é proprietário de um restaurante SUBWAY® tem todo um
                     suporte de qualidade internacional, esse apoio é constante e
                     nele está incluso:
-                    <ul>
-                      <br />
-                      <li>Treinamentos;</li>
-                      <li>Desenvolvimento de produtos;</li>
-                      <li>
-                        Diretrizes de projeto de loja e pedidos de equipamentos.
-                      </li>
-                    </ul>
+                    <br/>
+                    <br/>
+                     • Treinamentos;
+                     <br/>
+                     •  Desenvolvimento de produtos;
+                     <br/>
+                     • Diretrizes de projeto de loja e equipamentos.
                   </p>
                 }
               />
@@ -155,18 +152,18 @@ const Franchise = () => {
         </Container>
       </section>
 
-      <section className="background-section">
-        <Container>
-          <Row className="d-flex flex-column flex-md-row justify-content-around">
-            <Col lg={6} md={12} className="mb-4 mb-md-0 p-0">
-              <h1 className="steps">Próximas etapas</h1>
+      <section className="stepsSection">
+        <Container className="noPadding">
+          <Row className="position-relative d-flex flex-column flex-md-row justify-content-around">
+            <Col xl={6} md={12} className="stepsCol mb-4">
+              <h1 className="h1 steps">Próximas etapas</h1>
               <div className="stepBox">
                 <a href="/carrers">
                   <Button
                     btnType="button"
                     content="1. SOLICITAR UM CATÁLOGO"
                     bgColor="rgba(0, 98, 40, 0.6)"
-                    border="1px solid var(--green-700)"
+                    border="1px solid #00622899"
                     color="var(--light)"
                     padding=".75rem 2.5rem"
                     bdRadius="200px"
@@ -185,9 +182,9 @@ const Franchise = () => {
                 <a href="/carrers">
                   <Button
                     btnType="button"
-                    content="1. SOLICITAR UM CATÁLOGO"
+                    content="2. CANDIDATAR-SE A PROPRIETÁRIO"
                     bgColor="rgba(0, 98, 40, 0.6)"
-                    border="1px solid var(--green-700)"
+                    border="1px solid #00622899"
                     color="var(--light)"
                     padding=".75rem 2.5rem"
                     bdRadius="200px"
@@ -203,8 +200,8 @@ const Franchise = () => {
                 </h3>
               </div>
             </Col>
-            <Col lg={6} md={12} className="mb-4 mb-md-0 p-0">
-              <h1 className="apply1">Sou qualificado?</h1>
+            <Col xl={6} md={12} className="stepsCol mb-4 mb-md-0">
+              <h2 className="h2 apply1">Sou qualificado?</h2>
               <p className="applyText">
                 Quando você se torna um franqueado SUBWAY®, você já começa
                 ganhando, pois somos a maior rede de restaurantes do mundo e uma
@@ -213,7 +210,7 @@ const Franchise = () => {
                 contar com toda a nossa estrutura e experiência de mercado.
               </p>
 
-              <h1 className="apply2">O seu investimento</h1>
+              <h2 className="h2 apply2">O seu investimento</h2>
               <p className="applyText">
                 Ter uma franquia SUBWAY® é contar com um modelo de negócio
                 simples e eficiente, que tem custo inicial mais baixo do que a
@@ -223,9 +220,11 @@ const Franchise = () => {
                 conosco e tire todas as suas dúvidas.
               </p>
             </Col>
+            <Col lg={12} md={12} className="imgCol">
+              <img src={Sub} alt="Sub" className="img-fluid" />
+            </Col>
           </Row>
         </Container>
-        <img src={Sub} alt="Imagem" className="background-image" />
       </section>
 
       <Footer />

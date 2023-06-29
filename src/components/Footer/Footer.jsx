@@ -2,42 +2,131 @@ import './Footer.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Logo from "../../assets/logo.svg";
 import Button from "../Button/Button";
-import { faInstagram, faFacebook, faTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faFacebookF, faTwitter, faTiktok , faYoutube} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
     <footer className="bg-light text-dark py-4">
       <Container>
         <Row className='mb-3'>
-          <Col xs={6}>
-            <a href="https://www.instagram.com/subwaybrasil/" target='_blank' rel='noreferrer'>
+          <Col xs={12} md={6} className='mb-3'>
+            <a href="https://www.instagram.com/subwaybrasil/" target='_blank' rel='noreferrer' className='me-1'>
               <Button 
                 border="1px var(--green-900) solid"
                 bgColor="transparent"
                 bdRadius="200px"
                 padding="none"
+                buttonSize="48px"
 
                 icon={faInstagram}
                 iconColor="var(--green-900)"
                 iconSize="xl"
+
+                borderHover="1px var(--green-700) solid"
+                bgColorHover="var(--green-700)"
+
+              />
+            </a>
+            <a href="https://www.facebook.com/subwaybrasil/" target='_blank' rel='noreferrer' className='me-1'>
+              <Button 
+                border="1px var(--green-900) solid"
+                bgColor="transparent"
+                bdRadius="200px"
+                padding="none"
+                buttonSize="48px"
+
+                icon={faFacebookF}
+                iconColor="var(--green-900)"
+                iconSize="xl"
+
+                borderHover="1px var(--green-700) solid"
+                bgColorHover="var(--green-700)"
+
+              />
+            </a>
+            <a href="https://www.twitter.com/SubwayBrasil" target='_blank' rel='noreferrer' className='me-1'>
+              <Button 
+                border="1px var(--green-900) solid"
+                bgColor="transparent"
+                bdRadius="200px"
+                padding="none"
+                buttonSize="48px"
+
+                icon={faTwitter}
+                iconColor="var(--green-900)"
+                iconSize="xl"
+
+                borderHover="1px var(--green-700) solid"
+                bgColorHover="var(--green-700)"
+
+              />
+            </a>
+            <a href="https://www.tiktok.com/@subway.brasil" target='_blank' rel='noreferrer' className='me-1'>
+              <Button 
+                border="1px var(--green-900) solid"
+                bgColor="transparent"
+                bdRadius="200px"
+                padding="none"
+                buttonSize="48px"
+
+                icon={faTiktok}
+                iconColor="var(--green-900)"
+                iconSize="xl"
+
+                borderHover="1px var(--green-700) solid"
+                bgColorHover="var(--green-700)"
+
+              />
+            </a>
+            <a href="https://www.tiktok.com/@subway.brasil" target='_blank' rel='noreferrer' className='me-1'>
+              <Button 
+                border="1px var(--green-900) solid"
+                bgColor="transparent"
+                bdRadius="200px"
+                padding="none"
+                buttonSize="48px"
+
+                icon={faYoutube}
+                iconColor="var(--green-900)"
+                iconSize="lg"
+
+                borderHover="1px var(--green-700) solid"
+                bgColorHover="var(--green-700)"
+
               />
             </a>
           </Col>
-          <Col xs={6}>
-            Botao
+          <Col xs={12} md={6} className='buttonDelivery d-flex'>
+          <a href="/franchise">
+                <Button
+                  btnType='button'
+                  content='Fazer pedido'
+                  bgColor='var(--green-900)'
+                  border='1px solid var(--green-900)'
+                  color='var(--light)'
+                  padding='.75rem 2.5rem'
+                  bdRadius='200px'
+                  fontWeight='700'
+
+                  bgColorHover='var(--green-700)'
+                  borderHover='1px solid var(--green-700)'
+                  colorHover='var(--light)'
+                />
+              </a>
           </Col>
         </Row>
-          <Col xs={12} md={3}>
+          <Col xs={12}>
             <h5>Links</h5>
             <ul className="list-unstyled">
-              <li><a href="/">Home</a></li>
               <li><a href="/menu">Cardápio</a></li>
-              <li><a href="/locations">Locations</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="/restaurants">Restaurantes</a></li>
+              <li><a href="/aboutUs">Sobre nós</a></li>
+              <li><a href="/carrers">Carreiras</a></li>
+              <li><a href="/franchise">Franquia</a></li>
             </ul>
           </Col>
         <hr className="my-4" />
-        <p className="text-center">© {new Date().getFullYear()} Subway. All rights reserved.</p>
+        <p className="text-center">© {new Date().getFullYear()} Subway. Todos os direitos reservados.</p>
       </Container>
     </footer>
   );

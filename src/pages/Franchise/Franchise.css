@@ -1,17 +1,28 @@
-.content {
-  background-image: (rgba(0, 98, 40, 0.11), rgba(255, 194, 20, 0.11));
+.heroFranchise {
+  padding: 0;
+  background-color: #008A2D;
+  height: 50vh;
+  
 }
 
 section {
   padding: var(--p-section);
 }
 
-.franchiseText {
+.h1 {
   color: var(--green-900);
   text-align: left;
-  font-size: 4rem;
   font-weight: 800;
-  padding-bottom: 2rem;
+}
+
+.h2 {
+  color: var(--green-900);
+  text-align: left;
+  font-weight: 800;
+}
+
+.rounded-20 {
+  border-radius: 20px 20px 0 0;
 }
 
 .greenBG {
@@ -20,17 +31,6 @@ section {
 
 .whyText {
   color: var(--yellow-900);
-  text-align: left;
-  font-size: 4rem;
-  font-weight: 800;
-  padding-bottom: 2rem;
-}
-
-.whyDescribe {
-  color: var(--light);
-  text-align: justify;
-  font-size: 1.2rem;
-  font-weight: 400;
 }
 
 .custom-title {
@@ -45,19 +45,11 @@ section {
   text-align: justify;
 }
 
-.steps {
-  color: var(--green-900);
-  text-align: left;
-  font-size: 4rem;
-  font-weight: 800;
-  padding-bottom: 2rem;
-}
-
 .stepBox {
   margin-top: 1rem;
   background-color: rgba(0, 98, 40, 0.2);
   border-radius: 15px;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .stepText {
@@ -66,57 +58,49 @@ section {
   font-size: 1rem;
   font-weight: 600;
   padding-top: 2rem;
-}
-
-.apply1 {
-  color: var(--green-900);
-  text-align: left;
-  font-size: 3rem;
-  font-weight: 800;
-  padding-left: 4rem;
-  padding-top: 7.3rem;
-}
-
-.apply2 {
-  color: var(--green-900);
-  text-align: left;
-  font-size: 3rem;
-  font-weight: 800;
-  padding-left: 4rem;
-}
+} 
 
 .applyText {
   color: var(--green-900);
   text-align: justify;
-  font-size: 1rem;
   font-weight: 400;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  font-weight: 500;
 }
 
-.background-section {
+.imgCol {
+  display: flex;
+  justify-content: end;
   position: relative;
 }
 
-.background-image {
-  position: absolute;
-  top: 45%;
-  right: 0;
-  height: 29%;
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  
 }
 
 @media (max-width: 767.98px) {
-  .franchiseText {
-    font-size: 2rem;
+  .heroFranchise {
+    height: 70vh;
   }
+
+  h1 {
+    font-size: 3rem;
+  }
+
   .apply1 {
     font-size: 2rem;
   }
+
   .apply2 {
     font-size: 2rem;
   }
+
   .background-image{
     display: none;
   }
+  
 }

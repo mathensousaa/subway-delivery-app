@@ -6,3 +6,13 @@ a {
 a:hover {
     color: var(--green-700);
 }
+
+.buttonDelivery {
+    justify-content: end;
+}
+
+@media (max-width: 768px) {
+    .buttonDelivery {
+        justify-content: left;
+    }
+  }

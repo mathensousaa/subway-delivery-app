@@ -11,13 +11,13 @@ import History from "../../assets/history.jpg";
 
 const AboutUs = () => {
   return (
-    <div className="content">
+    <div className="gradientBackground">
       <Header />
       
       <section>
         <Container>
           <Row className="d-flex justify-content-between">
-            <Col lg={4} md={12}>
+            <Col lg={5} md={12} className="d-flex flex-column justify-content-center text-center">
               <img
                 src={History}
                 alt="História do Subway"
@@ -27,10 +27,10 @@ const AboutUs = () => {
             <Col
               lg={6}
               md={12}
-              className="d-flex flex-column justify-content-center"
+              className="d-flex flex-column"
             >
               <h2>A história do SUBWAY®</h2>
-              <p>
+              <p className="paragraph">
                 Com um empréstimo de US$ 1.000, o amigo, o Dr. Peter Buck,
                 ofereceu-se como sócio de Fred, e um relacionamento de negócios
                 que iria mudar o panorama do setor de lanches rápidos se formou.
@@ -53,7 +53,7 @@ const AboutUs = () => {
           <Row className="d-flex justify-content-between">
             <Col lg={6} md={12} className="d-flex flex-column">
               <h2>SUBWAY®, a franquia</h2>
-              <p>
+              <p className="paragraph">
                 Em 1974, a dupla possuía e operava 16 lojas de sanduíche
                 &quot;submarinos&quot; em Connecticut. Entendendo que não
                 chegariam à meta de 32 lojas no prazo, começaram a abrir
@@ -62,9 +62,9 @@ const AboutUs = () => {
               </p>
             </Col>
             <Col
-              lg={4}
+              lg={5}
               md={12}
-              className="d-flex flex-column justify-content-center"
+              className="d-flex flex-column justify-content-center text-center"
             >
               <img
                 src={Franchise}
@@ -80,9 +80,9 @@ const AboutUs = () => {
         <Container>
           <Row className="d-flex justify-content-between">
             <Col
-              lg={4}
+              lg={5}
               md={12}
-              className="d-flex flex-column justify-content-center"
+              className="d-flex flex-column justify-content-center text-center"
             >
               <img
                 src={Future}
@@ -92,7 +92,7 @@ const AboutUs = () => {
             </Col>
             <Col lg={6} md={12} className="d-flex flex-column">
               <h2>Um novo futuro</h2>
-              <p>
+              <p className="paragraph">
                 Hoje, a marca SUBWAY® é a maior cadeia de sanduíches
                 &quot;submarinos&quot; do mundo, com mais de 39 mil unidades em
                 todo o mundo. Nós nos tornamos a principal opção para pessoas
@@ -111,7 +111,7 @@ const AboutUs = () => {
         <Container>
           <Row className="d-flex justify-content-around align-items-center">
             <Col
-              lg={3}
+              lg={5}
               md={12}
               className="d-flex flex-column position-relative workfranchise p-0"
             >
@@ -132,7 +132,7 @@ const AboutUs = () => {
               </a>
             </Col>
             <Col
-              lg={3}
+              lg={5}
               md={12}
               className="d-flex flex-column position-relative workfranchise p-0"
             >
