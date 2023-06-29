@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "../../components/Button/Button";
 import Card from "../../components/Card/Card";
-import FranchiseHero from "../../assets/franchiseHero2.jpg";
+import FranchiseHero from "../../assets/franchiseHero.jpg";
 import FranchiseHeroSmall from "../../assets/franchiseHeroSmall.jpg";
 import International from "../../assets/international.jpg";
 import OurChain from "../../assets/ourChain.jpg";
