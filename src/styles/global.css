@@ -1,5 +1,6 @@
 :root {
     --light: #FAFAFA;
+    --fgray: #A9A9A9;
 
     --green-100: rgba(0, 98, 40, 0.04);
     --green-700: #0F9246;
@@ -10,6 +11,29 @@
 
 
     --p-section: 4rem 2rem;
+}
+
+::selection {
+  background-color: var(--green-700);
+  color: #fff;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 8px; /* Largura da barra de rolagem */
+  background-color: #F5F5F5; /* Cor de fundo da barra de rolagem */
+}
+
+/* Estilo do "polegar" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: #bbbbbb; /* Cor do "polegar" da barra de rolagem */
+  border-radius: 4px; /* Bordas arredondadas do "polegar" */
+}
+
+/* Estilo da área de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5; /* Cor de fundo da área de fundo da barra de rolagem */
 }
 
 .gradientBackground{
@@ -28,5 +52,9 @@
     .franchiseContent {
         text-align: center;
         margin-bottom: 2rem;
+    }
+
+    ::-webkit-scrollbar {
+      height: 4px;
     }
   }
