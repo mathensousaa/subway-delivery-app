@@ -1,4 +1,3 @@
-import "./Header.css";
 import Logo from "../../assets/logo.svg";
 import Button from "../Button/Button";
 import Container from "react-bootstrap/Container";
