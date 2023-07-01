@@ -21,7 +21,7 @@ function Header() {
           placement="end"
         >
           <Offcanvas.Header closeButton className="borderBottom">
-            <a href="/">
+             <a href="/">
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
                 Subway
               </Offcanvas.Title>

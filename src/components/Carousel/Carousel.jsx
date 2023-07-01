@@ -1,6 +1,6 @@
 import "./carousel.css";
 import Carousel from "react-bootstrap/Carousel";
-import BMT from "../../assets/subs/BMT.png";
+import BMT from "../../assets/Itens/Subs/15/frangoSuperBacon.png";
 import Card from "../Card/Card";
 
 const ImgCarousel = () => {
