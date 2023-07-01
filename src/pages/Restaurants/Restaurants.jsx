@@ -1,13 +1,12 @@
-import './Restaurants.css';
-import Header from '../../components/Header/Header';
+import "./Restaurants.css";
+import Header from "../../components/Header/Header";
 
 const Restaurants = () => {
-    return (
-        <div>
-            <Header />
-            <h1> Você está no Restaurantes</h1>
-        </div>
-    );
-}
+  return (
+    <div>
+      <Header />
+    </div>
+  );
+};
 
-export default Restaurants
+export default Restaurants;

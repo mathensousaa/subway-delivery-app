@@ -1,0 +1,10 @@
+.heroCarrer{
+    padding: 0;
+    background-color: #008A2D;
+    height: 50vh;
+    
+  }
+  
+  section {
+    padding: var(--p-section);
+  }
