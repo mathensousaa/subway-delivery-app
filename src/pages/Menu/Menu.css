@@ -1,0 +1,39 @@
+.navScrollBox {
+    background-color: var(--light);
+    display: grid;
+    grid-auto-flow: column;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    gap: 0;
+}
+
+.snapsInline {
+    scroll-snap-type: inline mandatory;
+}
+
+.navScrollBox .nav-item {
+    height: 100%;
+    text-align: center;
+    min-width: max-content;
+}
+
+.navScrollBox a {
+    height: 100%;
+    width: 100%;
+    color: var(--fgray);
+}
+
+.navScrollBox a:hover {
+    color: var(--green-700);
+    border: none;
+}
+
+.nav-underline .nav-link.active, .nav-underline .show>.nav-link {
+    color: var(--green-700);
+    border-bottom: 2px solid var(--green-700);
+}
+
+div.sticky-top {
+    top: 56px;
+}

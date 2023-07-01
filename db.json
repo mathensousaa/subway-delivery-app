@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "role": "user"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Subway Downtown",
+      "address": "123 Main Street"
+    },
+    {
+      "id": 2,
+      "name": "Subway Westside",
+      "address": "456 Elm Street"
+    }
+  ],
+  "subs": [
+    {
+      "id": 1,
+      "name": "Chicken Teriyaki",
+      "description": "Grilled chicken strips marinated in teriyaki sauce.",
+      "price": 6.99
+    },
+    {
+      "id": 2,
+      "name": "Italian BMT",
+      "description": "A classic combination of pepperoni, salami, and ham.",
+      "price": 7.49
+    }
+  ],
+  "drinks": [
+    {
+      "id": 1,
+      "name": "Coca-Cola",
+      "size": "Regular",
+      "price": 1.99
+    },
+    {
+      "id": 2,
+      "name": "Sprite",
+      "size": "Regular",
+      "price": 1.99
+    }
+  ],
+  "salads": [
+    {
+      "id": 1,
+      "name": "Chicken Caesar Salad",
+      "description": "Grilled chicken on a bed of crisp lettuce, croutons, and Caesar dressing.",
+      "price": 5.99
+    },
+    {
+      "id": 2,
+      "name": "Italian Chopped Salad",
+      "description": "A mix of salami, pepperoni, and ham with your choice of veggies and dressing.",
+      "price": 6.49
+    }
+  ],
+  "sides": [
+    {
+      "id": 1,
+      "name": "Chips",
+      "price": 1.49
+    },
+    {
+      "id": 2,
+      "name": "Cookies",
+      "price": 1.99
+    }
+  ]
+}  
