@@ -28,7 +28,7 @@ function Header() {
             </a>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav className="me-auto ms-auto borderBottom mb-md-4">
+            <Nav className="me-auto ms-auto borderBottom mb-xl-0 mb-lg-0 mb-md-4 mb-4">
               <NavLink to="/menu" className="nav-link" activeclassname="active">
                 Cardápio
               </NavLink>
@@ -37,7 +37,7 @@ function Header() {
                 className="nav-link"
                 activeclassname="active"
               >
-                Restaurants
+                Restaurantes
               </NavLink>
               <NavLink
                 to="/aboutUs"
@@ -58,7 +58,7 @@ function Header() {
                 className="nav-link"
                 activeclassname="active"
               >
-                Franquia
+                Franquias
               </NavLink>
             </Nav>
             <a href="/menu">

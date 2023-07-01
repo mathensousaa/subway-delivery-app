@@ -1,35 +1,35 @@
 .navbar-toggler {
-    border: none;
+  border: none;
 }
 
 .navbar-toggler:hover {
-    opacity: .75;
+  opacity: 0.75;
 }
 
 .navbar-toggler:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .navbar-nav a:hover {
-    transition: .3s all;
-    color: var(--green-700);
+  transition: 0.3s all;
+  color: var(--green-700);
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--green-700);
-    font-weight: 500;
+  color: var(--green-700);
+  font-weight: 500;
 }
 
 .btn-close:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
-@media (max-width: 992px) {
-    .borderBottom {
-        border-bottom: 1px solid #DDD;
-    }
-
-    .navbar-nav {
-        padding-bottom: 1rem;
-    }
+@media (max-width: 99px) {
+  .borderBottom {
+    border-bottom: 1px solid #ddd;
   }
+
+  .navbar-nav {
+    padding-bottom: 1rem;
+  }
+}
