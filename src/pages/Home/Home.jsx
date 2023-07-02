@@ -106,7 +106,6 @@ const Home = () => {
           </Col>
         </Row>
       </section>
-
       <Footer />
     </div>
   );
