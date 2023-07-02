@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../components/Header/Header";
 import Button from "../../components/Button/Button";
@@ -8,11 +9,27 @@ import "./Register.css";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
+    id: "",
     name: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
+
+  const [formDataList, setFormDataList] = useState([]);
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("formDataList");
+    if (storedData) {
+      setFormDataList(JSON.parse(storedData));
+    }
+
+    const storedUserData = localStorage.getItem("userData");
+    if (storedUserData) {
+      const { name, email } = JSON.parse(storedUserData);
+      window.location.href = `/profile?name=${name}&email=${email}`;
+    }
+  }, []);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -24,22 +41,37 @@ const RegisterPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    localStorage.setItem("formData", JSON.stringify(formData));
-    console.log("Dados do formulário foram armazenados no localStorage.");
+
+    const emailExists = formDataList.some(
+      (data) => data.email === formData.email
+    );
+
+    if (emailExists) {
+      setErrorMessage("Já existe uma conta com este email.");
+      return;
+    }
 
     if (formData.password !== formData.confirmPassword) {
       setErrorMessage("As senhas não coincidem.");
       return;
     }
 
+    const newFormData = { ...formData, id: uuidv4() };
+
+    const updatedFormDataList = [...formDataList, newFormData];
+    localStorage.setItem("formDataList", JSON.stringify(updatedFormDataList));
+    console.log("Dados do formulário foram armazenados no localStorage.");
+
+    setFormDataList(updatedFormDataList);
+
     setFormData({
+      id: "",
       name: "",
       email: "",
       password: "",
       confirmPassword: "",
     });
 
-    // Redirecionar para a página de login após o cadastro ser concluído
     window.location.href = "/login";
   };
 
@@ -118,7 +150,9 @@ const RegisterPage = () => {
                 </Row>
               </form>
             </Container>
-          {errorMessage && <p className="errorMessage h5 text-danger">{errorMessage}</p>}
+            {errorMessage && (
+              <p className="errorMessage text-danger">{errorMessage}</p>
+            )}
           </Card.Body>
         </Card>
       </div>

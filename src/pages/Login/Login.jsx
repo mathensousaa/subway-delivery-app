@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "../../components/Header/Header";
 import Button from "../../components/Button/Button";
@@ -14,6 +14,14 @@ const LoginPage = () => {
 
   const [loginMessage, setLoginMessage] = useState("");
 
+  useEffect(() => {
+    const storedUserData = localStorage.getItem("userData");
+    if (storedUserData) {
+      const { name, email } = JSON.parse(storedUserData);
+      window.location.href = `/profile?name=${name}&email=${email}`;
+    }
+  }, []);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevFormData) => ({
@@ -24,18 +32,22 @@ const LoginPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const storedData = localStorage.getItem("formData");
+    const storedData = localStorage.getItem("formDataList");
     if (storedData) {
       const parsedData = JSON.parse(storedData);
-      if (
-        parsedData.email === formData.email &&
-        parsedData.password === formData.password
-      ) {
+      const user = parsedData.find(
+        (data) =>
+          data.email === formData.email && data.password === formData.password
+      );
+      if (user) {
+        const userData = { id: user.id, name: user.name, email: user.email };
+        localStorage.setItem("userData", JSON.stringify(userData));
         setLoginMessage("Login realizado com sucesso!");
         setFormData({
           email: "",
           password: "",
         });
+        window.location.href = `/profile?name=${user.name}&email=${user.email}`;
       } else {
         setLoginMessage("Email ou senha inválidos.");
       }
@@ -55,7 +67,10 @@ const LoginPage = () => {
               Entrar na sua conta
             </Card.Title>
             <Container className="d-flex flex-column align-items-center">
-              <form className="mx-auto text-center my-4" onSubmit={handleSubmit}>
+              <form
+                className="mx-auto text-center my-4"
+                onSubmit={handleSubmit}
+              >
                 <Row className="d-flex flex-column flex-md-row justify-content-center mb-5">
                   <Col lg={12} className="mb-3">
                     <input
@@ -94,9 +109,7 @@ const LoginPage = () => {
                 </Row>
               </form>
             </Container>
-            {loginMessage && (
-              <p className="loginMessage">{loginMessage}</p>
-            )}
+            {loginMessage && <p className="loginMessage">{loginMessage}</p>}
           </Card.Body>
         </Card>
       </div>
