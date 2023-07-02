@@ -9,7 +9,8 @@ import PopoverComponent from "../Popover/Popover";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import Card from "../Card/Card";
-import BMT  from "../../assets/Itens/Subs/15/frangoSuperBacon.png";
+import BMT from "../../assets/Itens/Subs/15/frangoSuperBacon.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -54,28 +55,47 @@ function Header() {
 
             <PopoverComponent
               icon={faShoppingCart}
-              content= { <Card
-                cardWidth="10rem"
-                title="B.M.T Italiano"
-                scr={BMT}
-                alt="B.M.T Italiano"
-                cardClass="text-center"
-                bodyClass="p-0"
-                bdRadius="16px"
-              />
+              content={
+                <Card
+                  cardWidth="10rem"
+                  title="B.M.T Italiano"
+                  scr={BMT}
+                  alt="B.M.T Italiano"
+                  cardClass="text-center"
+                  bodyClass="p-0"
+                  bdRadius="16px"
+                />
               }
             />
-
 
             <PopoverComponent
               icon={faUser}
               content={
                 <>
-                  <a href="/login">Login</a>
+                  <Link
+                    to="/login"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Entrar
+                  </Link>
                   <hr />
-                  <a href="/register">Cadastre-se</a>
+                  <Link
+                    to="/register"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Cadastrar
+                  </Link>
                   <hr />
-                  <a href="/profile">Minha conta</a>
+                  <Link
+                    to="/profile"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Perfil
+                  </Link>
+                  <hr />
                 </>
               }
             />
