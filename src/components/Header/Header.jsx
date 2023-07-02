@@ -20,7 +20,7 @@ function Header() {
           placement="end"
         >
           <Offcanvas.Header closeButton className="borderBottom">
-             <a href="/">
+            <a href="/">
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
                 Subway
               </Offcanvas.Title>
@@ -59,7 +59,22 @@ function Header() {
               >
                 Franquias
               </NavLink>
+              <NavLink
+                to="/register"
+                className="nav-link"
+                activeclassname="active"
+              >
+                Cadastre-se
+              </NavLink>
+              <NavLink
+                to="/login"
+                className="nav-link"
+                activeclassname="active"
+              >
+                Login
+              </NavLink>
             </Nav>
+
             <a href="/menu">
               <Button
                 btnType="button"

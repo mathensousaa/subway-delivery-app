@@ -8,7 +8,8 @@ import Restaurants from './pages/Restaurants/Restaurants';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Carrers from './pages/Carrers/Carrers';
 import Franchise from './pages/Franchise/Franchise';
-
+import Register from './pages/Register/Register';
+import Login from './pages/Login/Login';
 
 function App () {
   return (
@@ -20,6 +21,8 @@ function App () {
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/carrers" element={<Carrers />} />
           <Route path="/franchise" element={<Franchise />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
     </Router>
   )

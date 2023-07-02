@@ -5,7 +5,6 @@ const Carrers = () => {
   return (
     <div>
       <Header />
-      <h1> Você está na Carreiras</h1>
     </div>
   );
 };

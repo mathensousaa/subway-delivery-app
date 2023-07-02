@@ -1,16 +1,15 @@
 :root {
-    --light: #FAFAFA;
-    --fgray: #A9A9A9;
+  --light: #fafafa;
+  --fgray: #a9a9a9;
 
-    --green-100: rgba(0, 98, 40, 0.04);
-    --green-700: #0F9246;
-    --green-900: #006228;
+  --green-100: rgba(0, 98, 40, 0.04);
+  --green-700: #0f9246;
+  --green-900: #006228;
 
-    --yellow-800: #FFC214;
-    --yellow-900: #ffbb00;
+  --yellow-800: #ffc214;
+  --yellow-900: #ffbb00;
 
-
-    --p-section: 4rem 2rem;
+  --p-section: 4rem 2rem;
 }
 
 ::selection {
@@ -22,7 +21,7 @@
 ::-webkit-scrollbar {
   height: 6px;
   width: 8px; /* Largura da barra de rolagem */
-  background-color: #F5F5F5; /* Cor de fundo da barra de rolagem */
+  background-color: #f5f5f5; /* Cor de fundo da barra de rolagem */
 }
 
 /* Estilo do "polegar" da barra de rolagem */
@@ -33,11 +32,14 @@
 
 /* Estilo da área de fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
-  background-color: #F5F5F5; /* Cor de fundo da área de fundo da barra de rolagem */
+  background-color: #f5f5f5; /* Cor de fundo da área de fundo da barra de rolagem */
 }
 
-.gradientBackground{
-  background-image: linear-gradient(rgba(0, 98, 40,0.11), rgba(255, 194, 20, 0.11));   
+.gradientBackground {
+  background-image: linear-gradient(
+    rgba(0, 98, 40, 0.11),
+    rgba(255, 194, 20, 0.11)
+  );
 }
 
 .text-light {
@@ -45,16 +47,20 @@
 }
 
 @media (max-width: 768px) {
-    :root {
-      --p-section: 3rem 1rem;
-    }
-
-    .franchiseContent {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    ::-webkit-scrollbar {
-      height: 4px;
-    }
+  :root {
+    --p-section: 3rem 1rem;
   }
+
+  .franchiseContent {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  ::-webkit-scrollbar {
+    height: 4px;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
