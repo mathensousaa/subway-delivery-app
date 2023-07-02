@@ -112,4 +112,8 @@ section.menu .card img {
     section.heroMenu img{
         width: 100%;
     }
+
+    section.menu .card img {
+        inline-size: 40%;
+    }
 }

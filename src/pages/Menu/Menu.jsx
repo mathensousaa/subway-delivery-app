@@ -6,19 +6,35 @@ import Footer from "../../components/Footer/Footer";
 import { Row, Col, Nav, Card, Container } from "react-bootstrap";
 
 const SubwayMenu = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const [SubsMenu, setSubsMenu] = useState([]);
   const [SaladsMenu, setSaladsMenu] = useState([]);
   const [DessertsMenu, setDessertsMenu] = useState([]);
   const [DrinksMenu, setDrinksMenu] = useState([]);
+  const [BreadsMenu, setBreadsMenu] = useState([]);
+  const [AdditionalMenu, setAdditionalMenu] = useState([]);
+  const [SaucesMenu, setSaucesMenu] = useState([]);
+  const [VegetablesMenu, setVegetablesMenu] = useState([]);
+  const [CheesesMenu, setCheesesMenu] = useState([]);
+  const [SeasonsMenu, setSeasonsMenu] = useState([]);
 
-  const src15 = "/assets/Itens/Subs/15/";
-  const src30 = "/assets/Itens/Subs/30/";
-  const srcCombo15 = "/assets/Itens/Subs/combo15/";
-  const srcCombo30 = "/assets/Itens/Subs/combo30/";
-  const srcSalads = "/assets/Itens/Saladas/salada/";
-  const srcSaladsCombo = "/assets/Itens/Saladas/comboSalada/";
-  const srcDesserts = "/assets/Itens/Sobremesas/";
-  const srcDrinks = "./assets/Itens/Bebidas/";
+  const src15 = "../../../src/assets/Itens/Subs/15/";
+  const src30 = "../../../src/assets/Itens/Subs/30/";
+  const srcCombo15 = "../../../src/assets/Itens/Subs/combo15/";
+  const srcCombo30 = "../../../src/assets/Itens/Subs/combo30/";
+  const srcSalads = "../../../src/assets/Itens/Saladas/salada/";
+  const srcSaladsCombo = "../../../src/assets/Itens/Saladas/comboSalada/";
+  const srcDesserts = "../../../src/assets/Itens/Sobremesas/";
+  const srcDrinks = "../../../src/assets/Itens/Bebidas/";
+  const srcBreads = "../../../src/assets/Itens/Lanche/Paes";
+  const srcCheeses = "../../../src/assets/Itens/Lanche/Queijos";
+  const srcVegetables = "../../../src/assets/Itens/Lanche/Vegetais";
+  const srcAdditional = "../../../src/assets/Itens/Lanche/Adicionais";
+  const srcSeasons = "../../../src/assets/Itens/Lanche/Temperos";
+  const srcSauces = "../../../src/assets/Itens/Lanche/Molhos";
+
+  const importImage = (path) => import(path).then((module) => module.default);
 
   const subs15img = [
     `${src15}BMT.png`,
@@ -37,6 +53,8 @@ const SubwayMenu = () => {
     `${src15}vegetariano.png`,
   ];
 
+  const subs15imgPromises = subs15img.map((path) => importImage(path));
+
   const subsCombo15img = [
     `${srcCombo15}BMT.png`,
     `${srcCombo15}carneDefumadaCreamCheese.png`,
@@ -48,6 +66,8 @@ const SubwayMenu = () => {
     `${srcCombo15}steakChurrasco.png`,
     `${srcCombo15}vegetariano.png`,
   ];
+
+  const subsCombo15imgPromises = subsCombo15img.map((path) => importImage(path));
 
   const subs30img = [
     `${src30}BMT.png`,
@@ -66,6 +86,8 @@ const SubwayMenu = () => {
     `${src30}vegetariano.png`,
   ];
 
+  const subs30imgPromises = subs30img.map((path) => importImage(path));
+
   const subsCombo30img = [
     `${srcCombo30}BMT.png`,
     `${srcCombo30}carneDefumadaCreamCheese.png`,
@@ -79,6 +101,8 @@ const SubwayMenu = () => {
     `${srcCombo30}vegetariano.png`,
   ];
 
+  const subsCombo30imgPromises = subsCombo30img.map((path) => importImage(path));
+
   const saladsimg = [
     `${srcSalads}BMT.png`,
     `${srcSalads}carneDefumadaCreamCheese.png`,
@@ -90,6 +114,8 @@ const SubwayMenu = () => {
     `${srcSalads}steakChurrasco.png`,
     `${srcSalads}vegetariana.png`,
   ];
+
+  const saladsimgPromises = saladsimg.map((path) => importImage(path));
 
   const saladsComboimg = [
     `${srcSaladsCombo}BMT.png`,
@@ -104,6 +130,9 @@ const SubwayMenu = () => {
     `${srcSaladsCombo}vegetariana.png`,
   ];
 
+  const saladsComboimgPromises = saladsComboimg.map((path) => importImage(path));
+
+
   const dessertsimg = [
     `${srcDesserts}lamus.png`,
     `${srcDesserts}lamusPrestigio.png`,
@@ -112,6 +141,9 @@ const SubwayMenu = () => {
     `${srcDesserts}kit6Cookies.png`,
     `${srcDesserts}kit9Cookies.png`,
   ]
+
+  const dessertsimgPromises = dessertsimg.map((path) => importImage(path));
+
 
   const drinksimg = [
     `${srcDrinks}aguaMineral.png`,
@@ -125,6 +157,69 @@ const SubwayMenu = () => {
     `${srcDrinks}delValleUva.png`,
   ]
 
+  const drinksimgPromises = drinksimg.map((path) => importImage(path));
+
+  const breadsimg = [
+    `${srcBreads}3queijos.png`,
+    `${srcBreads}9graos.png`,
+    `${srcBreads}italianoBranco.png`,
+    `${srcBreads}parmesaoOregano.png`,
+  ]
+
+  const breadsimgPromises = breadsimg.map((path) => importImage(path));
+
+  const cheesesimg = [
+    `${srcCheeses}cheddar.png`,
+    `${srcCheeses}mussarelaRalada.png`,
+    `${srcCheeses}Suico.png`,
+  ]
+
+  const cheesesimgPromises = cheesesimg.map((path) => importImage(path));
+
+  const vegetablesimg = [
+    `${srcVegetables}alface.png`,
+    `${srcVegetables}azeitona.png`,
+    `${srcVegetables}cebolaRoxa.png`,
+    `${srcVegetables}pepino.png`,
+    `${srcVegetables}picles.png`,
+    `${srcVegetables}pimentao.png`,
+    `${srcVegetables}tomate.png`,
+  ]
+
+  const vegetablesimgPromises = vegetablesimg.map((path) => importImage(path));
+
+  const additionalimg = [
+    `${srcAdditional}bacon.png`,
+    `${srcAdditional}cheddarCremoso.png`,
+    `${srcAdditional}creamCheese.png`,
+    `${srcAdditional}dobroQueijo.png`,
+    `${srcAdditional}pepperoni.png`,
+    `${srcAdditional}presunto.png`,
+    `${srcAdditional}salame.png`,
+  ]
+
+  const additionalimgPromises = additionalimg.map((path) => importImage(path));
+
+  const seasonsimg = [
+    `${srcSeasons}azeite.png`,
+    `${srcSeasons}mixPimentas.png`,
+    `${srcSeasons}vinagre.png`,
+  ]
+
+  const seasonsimgPromises = seasonsimg.map((path) => importImage(path));
+
+  const saucesimg = [
+    `${srcSauces}barbecue.png`,
+    `${srcSauces}cebolaAgridoce.png`,
+    `${srcSauces}chipotle.png`,
+    `${srcSauces}maionese.png`,
+    `${srcSauces}maioneseTemperada.png`,
+    `${srcSauces}mostardaMel.png`,
+    `${srcSauces}parmesao.png`,
+    `${srcSauces}supreme.png`,
+  ]
+
+  const saucesimgPromises = saucesimg.map((path) => importImage(path));
   useEffect(() => {
     const SUBS = [
       { 
@@ -187,6 +282,156 @@ const SubwayMenu = () => {
         priceCombo30: 59.70,
         new: false,
       },
+      {
+        id: 4,
+        name: "Sub da Quebrada",
+        description: "Pão, Steak de Churrasco, Bacon, Pepperoni, Queijos, Vegetais e Molhos a sua escolha com valor adicional.",
+        serves: 1,
+        imgSub15: subs15img[4],
+        imgSub30: subs30img[4],
+        imgCombo15: subsCombo15img[3],
+        imgCombo30: subsCombo30img[3],
+        price15: 24.50,
+        price30: 37.50,
+        priceCombo15: 35.30,
+        priceCombo30: 57.70,
+        new: true,
+      },
+      {
+        id: 5,
+        name: "Sub Frango",
+        description: "Preferência nacional. Frango levemente temperado e assado na perfeição. Fica ainda mais delicioso com vegetais selecionados.",
+        serves: 1,
+        imgSub15: subs15img[5],
+        imgSub30: subs30img[5],
+        imgCombo15: subsCombo15img[4],
+        imgCombo30: subsCombo30img[4],
+        price15: 18.0,
+        price30: 31.0,
+        priceCombo15: 27.70,
+        priceCombo30: 45.40,
+        new: false,
+      },
+      {
+        id: 6,
+        name: "Sub Frango Defumado com Cream Cheese",
+        description: "Cubos de frango defumado misturados com o delicioso cream cheese. Uma delicia de dar água da boca.",
+        serves: 1,
+        imgSub15: subs15img[6],
+        imgSub30: subs30img[6],
+        imgCombo15: subsCombo15img[5],
+        imgCombo30: subsCombo30img[5],
+        price15: 21.50,
+        price30: 36.50,
+        priceCombo15: 33.70,
+        priceCombo30: 54.50,
+        new: false,
+      },
+      {
+        id: 7,
+        name: "Sub Frango Empanado",
+        description: "Empanado de Frango. Receita especial do Subway. Servido em pão fresquinho, frango empanado, queijo e vegetais à sua escolha. ",
+        serves: 1,
+        imgSub15: subs15img[7],
+        imgSub30: subs30img[7],
+        imgCombo15: subsCombo15img[6],
+        imgCombo30: subsCombo30img[6],
+        price15: 18.00,
+        price30: 31.00,
+        priceCombo15: 27.70,
+        priceCombo30: 45.40,
+        new: false,
+      },
+      {
+        id: 8,
+        name: "Sub Frango Super Bacon",
+        description: "Pão, Frango Empanado, Creme com Bacon, Bacon, Queijos, Vegetais e Molhos a sua escolha.",
+        serves: 1,
+        imgSub15: subs15img[8],
+        imgSub30: subs30img[8],
+        imgCombo15: subs15img[8],
+        imgCombo30: subs30img[8],
+        price15: 24.50,
+        price30: 37.50,
+        priceCombo15: 35.30,
+        priceCombo30: 57.70,
+        new: true,
+      },
+      {
+        id: 9,
+        name: "Sub Frango Teriyaki",
+        description: "Experimente o Frango Teriyaki, com pedaços suculentos de peito de frango e o delicioso molho teriyaki.",
+        serves: 1,
+        imgSub15: subs15img[9],
+        imgSub30: subs30img[9],
+        imgCombo15: subsCombo15img[7],
+        imgCombo30: subsCombo30img[7],
+        price15: 21.50,
+        price30: 36.50,
+        priceCombo15: 33.70,
+        priceCombo30: 54.50,
+        new: false,
+      },
+      {
+        id: 10,
+        name: "Sub Steak Cheddar Cremoso",
+        description: "O já adorado Steak Churrasco agora com o irresistível cheddar cremoso para mandar bem de verdade.",
+        serves: 1,
+        imgSub15: subs15img[10],
+        imgSub30: subs30img[10],
+        imgCombo15: subsCombo15img[8],
+        imgCombo30: subsCombo30img[8],
+        price15: 21.00,
+        price30: 35.50,
+        priceCombo15: 31.10,
+        priceCombo30: 50.60,
+        new: false,
+      },
+      {
+        id: 11,
+        name: "Sub Steak Churrasco",
+        description: "Pão, Steak de Churrasco, Queijos, Vegetais e Molhos a sua escolha.",
+        serves: 1,
+        imgSub15: subs15img[11],
+        imgSub30: subs30img[11],
+        imgCombo15: subsCombo15img[9],
+        imgCombo30: subsCombo30img[9],
+        price15: 21.00,
+        price30: 35.50,
+        priceCombo15: 31.10,
+        priceCombo30: 50.60,
+        new: false,
+      },
+      {
+        id: 12,
+        name: "Sub Teriyaki Veg",
+        description: "O Teriyaki Veg é feito com ingredientes de origem vegetal, sendo uma opção para os veganos, vegetarianos e para quem quiser experimentar.",
+        serves: 1,
+        imgSub15: subs15img[12],
+        imgSub30: subs30img[12],
+        imgCombo15: subsCombo15img[10],
+        imgCombo30: subsCombo30img[10],
+        price15: 21.00,
+        price30: 35.50,
+        priceCombo15: 31.10,
+        priceCombo30: 50.60,
+        new: true,
+      },
+      {
+        id: 13,
+        name: "Sub Vegetariano",
+        description: "Pão, Queijos, Vegetais e Molhos a sua escolha.",
+        serves: 1,
+        imgSub15: subs15img[13],
+        imgSub30: subs30img[13],
+        imgCombo15: subsCombo15img[11],
+        imgCombo30: subsCombo30img[11],
+        price15: 18.00,
+        price30: 31.00,
+        priceCombo15: 27.70,
+        priceCombo30: 45.40,
+        new: false,
+      },
     ];
 
     const Salads = [
@@ -227,6 +472,56 @@ const SubwayMenu = () => {
         serves: 1,
         imgSalad: saladsimg[3],
         imgCombo: saladsComboimg[3],
+        price: 20.00,
+        priceCombo: 33.60,
+      },
+      {
+        id: 4,
+        name: "Salada Frango Defumado com Cream Cheese",
+        description: "Seus vegetais preferidos com cubos de frango defumado misturados com o delicioso cream cheese.",
+        serves: 1,
+        imgSalad: saladsimg[4],
+        imgCombo: saladsComboimg[4],
+        price: 23.50,
+        priceCombo: 39.60,
+      },
+      {
+        id: 5,
+        name: "Salada Frango Empanado",
+        description: "Seus vegetais preferidos com empanado de frango.",
+        serves: 1,
+        imgSalad: saladsimg[5],
+        imgCombo: saladsComboimg[5],
+        price: 20.00,
+        priceCombo: 33.60,
+      },
+      {
+        id: 6,
+        name: "Salada Frango Teriyaki",
+        description: "Seus vegetais preferidos com pedaços suculentos de peito de frango e o delicioso molho teriyaki.",
+        serves: 1,
+        imgSalad: saladsimg[6],
+        imgCombo: saladsComboimg[6],
+        price: 23.50,
+        priceCombo: 39.60,
+      },
+      {
+        id: 7,
+        name: "Salada Steak Cheddar Cremoso",
+        description: "Seus vegetais preferidos com o já adorado Steak Churrasco agora com o irresistível cheddar cremoso.",
+        serves: 1,
+        imgSalad: saladsimg[7],
+        imgCombo: saladsComboimg[7],
+        price: 23.00,
+        priceCombo: 38.80,
+      },
+      {
+        id: 8,
+        name: "Salada Vegetariana",
+        description: "Seus vegetais preferidos com queijos e molhos a sua escolha.",
+        serves: 1,
+        imgSalad: saladsimg[8],
+        imgCombo: saladsComboimg[8],
         price: 20.00,
         priceCombo: 33.60,
       },
@@ -343,6 +638,198 @@ const SubwayMenu = () => {
       },
     ];
 
+    const Breads = [
+      {
+        id: 0,
+        name: "3 queijos",
+        img: breadsimg[0],
+      },
+      {
+        id: 1,
+        name: "9 grãos",
+        img: breadsimg[1],
+      },
+      {
+        id: 2,
+        name: "Italiano Branco",
+        img: breadsimg[2],
+      },
+      {
+        id: 3,
+        name: "Parmesão e Orégano",
+        img: breadsimg[3],
+      },
+    ];
+
+    const Additional = [
+      {
+        id: 0,
+        name: "Bacon",
+        img: additionalimg[0],
+        price15: 4.00,
+        price30: 8.00,
+      },
+      {
+        id: 1,
+        name: "Cheedar Cremoso",
+        img: additionalimg[1],
+        price15: 3.00,
+        price30: 6.00,
+      },
+      {
+        id: 2,
+        name: "Cream Cheese",
+        img: additionalimg[2],
+        price15: 3.00,
+        price30: 6.00,
+      },
+      {
+        id: 3,
+        name: "Dobro de queijo",
+        img: additionalimg[3],
+        price15: 2.00,
+        price30: 4.00,
+      },
+      {
+        id: 4,
+        name: "Pepperoni",
+        img: additionalimg[4],
+        price15: 4.00,
+        price30: 8.00,
+      },
+      {
+        id: 5,
+        name: "Presunto",
+        img: additionalimg[5],
+        price15: 3.50,
+        price30: 7.00,
+      },
+      {
+        id: 6,
+        name: "Salame",
+        img: additionalimg[6],
+        price15: 3.50,
+        price30: 7.00,
+      },
+    ]
+
+    const Sauces = [
+      {
+        id: 0,
+        name: "Barbecue",
+        img: saucesimg[0],
+      },
+      {
+        id: 1,
+        name: "Cebola Agridoce",
+        img: saucesimg[1],
+      },
+      {
+        id: 2,
+        name: "Chipotle",
+        img: saucesimg[2],
+      },
+      {
+        id: 3,
+        name: "Maionese",
+        img: saucesimg[3],
+      },
+      {
+        id: 4,
+        name: "Maionese Temperada",
+        img: saucesimg[4],
+      },
+      {
+        id: 5,
+        name: "Mostarda e Mel",
+        img: saucesimg[5],
+      },
+      {
+        id: 6,
+        name: "Parmesão",
+        img: saucesimg[6],
+      },
+      {
+        id: 7,
+        name: "Supreme",
+        img: saucesimg[7],
+      },
+    ]
+
+    const Vegetables = [
+      {
+        id: 0,
+        name: "Alface",
+        img: vegetablesimg[0],
+      },
+      {
+        id: 1,
+        name: "Azeitona",
+        img: vegetablesimg[1],
+      },
+      {
+        id: 2,
+        name: "Cebola Roxa",
+        img: vegetablesimg[2],
+      },
+      {
+        id: 3,
+        name: "Pepino",
+        img: vegetablesimg[3],
+      },
+      {
+        id: 4,
+        name: "Picles",
+        img: vegetablesimg[4],
+      },
+      {
+        id: 5,
+        name: "Pimentão",
+        img: vegetablesimg[5],
+      },
+      {
+        id: 6,
+        name: "Tomate",
+        img: vegetablesimg[6],
+      },
+    ]
+
+    const Cheeses = [
+      {
+        id: 0,
+        name: "Cheddar",
+        img: cheesesimg[0],
+      },
+      {
+        id: 1,
+        name: "Mussarela Ralada",
+        img: cheesesimg[1],
+      },
+      {
+        id: 2,
+        name: "Suíço",
+        img: cheesesimg[2],
+      },
+    ]
+
+    const Seasons = [
+      {
+        id: 0,
+        name: "Azeite",
+        img: seasonsimg[0],
+      },
+      {
+        id: 1,
+        name: "Mix de Pimentas",
+        img: seasonsimg[1],
+      },
+      {
+        id: 2,
+        name: "Vinagre",
+        img: seasonsimg[2],
+      },
+    ]
+
     const setLocalStorage = (localKey, list, setter) => {
       const storedMenu = localStorage.getItem(localKey);
     if (storedMenu) {
@@ -357,11 +844,29 @@ const SubwayMenu = () => {
     setLocalStorage("SaladsMenu", Salads, setSaladsMenu);
     setLocalStorage("DessertsMenu", Desserts, setDessertsMenu);
     setLocalStorage("DrinksMenu", Drinks, setDrinksMenu);
+    setLocalStorage("BreadsMenu", Breads, setBreadsMenu);
+    setLocalStorage("AdditionalMenu", Additional, setAdditionalMenu);
+    setLocalStorage("SaucesMenu", Sauces, setSaucesMenu);
+    setLocalStorage("VegetablesMenu", Vegetables, setVegetablesMenu);
+    setLocalStorage("CheesesMenu", Cheeses, setCheesesMenu);
+    setLocalStorage("SeasonsMenu", Seasons, setSeasonsMenu);
     
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   function limitCharacter(text, limit) {
-    if(window.innerWidth < 576 ) {
+    if(windowWidth < 576 ) {
       if (text.length <= limit) {
         return text;
       }
@@ -445,7 +950,7 @@ const SubwayMenu = () => {
                         <Card.Body className="cardContent">
                           <Card.Title>{sub.name}</Card.Title>
                           <small className="mb-2">{limitCharacter(sub.description, 50)}</small>
-                          <small className="mb-5 serves text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 p-1">Serve {sub.serves} {sub.server === 1 ? "pessoa" : "pessoa"}</small>
+                          <small className="mb-4 serves text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 p-1">Serve {sub.serves} {sub.server === 1 ? "pessoa" : "pessoa"}</small>
                           <span className="price">A partir de R$ {sub.price15.toLocaleString('pt-BR')}</span>
                         </Card.Body>
                       </Card>
