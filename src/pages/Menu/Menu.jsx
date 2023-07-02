@@ -11,14 +11,14 @@ const SubwayMenu = () => {
   const [DessertsMenu, setDessertsMenu] = useState([]);
   const [DrinksMenu, setDrinksMenu] = useState([]);
 
-  const src15 = "../../../src/assets/Itens/Subs/15/";
-  const src30 = "../../../src/assets/Itens/Subs/30/";
-  const srcCombo15 = "../../../src/assets/Itens/Subs/combo15/";
-  const srcCombo30 = "../../../src/assets/Itens/Subs/combo30/";
-  const srcSalads = "../../../src/assets/Itens/Saladas/salada/";
-  const srcSaladsCombo = "../../../src/assets/Itens/Saladas/comboSalada/";
-  const srcDesserts = "../../../src/assets/Itens/Sobremesas/";
-  const srcDrinks = ".../../../src/assets/Itens/Bebidas/";
+  const src15 = "/assets/Itens/Subs/15/";
+  const src30 = "/assets/Itens/Subs/30/";
+  const srcCombo15 = "/assets/Itens/Subs/combo15/";
+  const srcCombo30 = "/assets/Itens/Subs/combo30/";
+  const srcSalads = "/assets/Itens/Saladas/salada/";
+  const srcSaladsCombo = "/assets/Itens/Saladas/comboSalada/";
+  const srcDesserts = "/assets/Itens/Sobremesas/";
+  const srcDrinks = "./assets/Itens/Bebidas/";
 
   const subs15img = [
     `${src15}BMT.png`,
