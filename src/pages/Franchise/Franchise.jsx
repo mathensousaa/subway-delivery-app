@@ -200,7 +200,7 @@ const Franchise = () => {
                 </h3>
               </div>
             </Col>
-            <Col xl={6} md={12} className="stepsCol mb-4 mb-md-0">
+            <Col xl={6} md={12} className="stepsCol mb-4 mb-md-0 p-5">
               <h2 className="h2 apply1">Sou qualificado?</h2>
               <p className="applyText">
                 Quando você se torna um franqueado SUBWAY®, você já começa

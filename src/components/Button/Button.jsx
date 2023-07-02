@@ -38,7 +38,7 @@ function ButtonSubway (prop) {
         );    
     } else {
         return (
-            <Button type={prop.btnType} variant="primary" className='btn' style={buttonStyles} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <Button type={prop.btnType} variant="primary" className='btn' style={buttonStyles} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={prop.onClick}>
                 {prop.content}
             </Button>
         );    

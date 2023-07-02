@@ -5,6 +5,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import PopoverComponent from "../Popover/Popover";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
+import Card from "../Card/Card";
+import BMT  from "../../assets/Itens/Subs/15/frangoSuperBacon.png";
 
 function Header() {
   return (
@@ -32,25 +37,11 @@ function Header() {
                 Cardápio
               </NavLink>
               <NavLink
-                to="/restaurants"
-                className="nav-link"
-                activeclassname="active"
-              >
-                Restaurantes
-              </NavLink>
-              <NavLink
                 to="/aboutUs"
                 className="nav-link"
                 activeclassname="active"
               >
                 Sobre nós
-              </NavLink>
-              <NavLink
-                to="/carrers"
-                className="nav-link"
-                activeclassname="active"
-              >
-                Carreiras
               </NavLink>
               <NavLink
                 to="/franchise"
@@ -59,21 +50,35 @@ function Header() {
               >
                 Franquias
               </NavLink>
-              <NavLink
-                to="/register"
-                className="nav-link"
-                activeclassname="active"
-              >
-                Cadastre-se
-              </NavLink>
-              <NavLink
-                to="/login"
-                className="nav-link"
-                activeclassname="active"
-              >
-                Login
-              </NavLink>
             </Nav>
+
+            <PopoverComponent
+              icon={faShoppingCart}
+              content= { <Card
+                cardWidth="10rem"
+                title="B.M.T Italiano"
+                scr={BMT}
+                alt="B.M.T Italiano"
+                cardClass="text-center"
+                bodyClass="p-0"
+                bdRadius="16px"
+              />
+              }
+            />
+
+
+            <PopoverComponent
+              icon={faUser}
+              content={
+                <>
+                  <a href="/login">Login</a>
+                  <hr />
+                  <a href="/register">Cadastre-se</a>
+                  <hr />
+                  <a href="/profile">Minha conta</a>
+                </>
+              }
+            />
 
             <a href="/menu">
               <Button
