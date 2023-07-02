@@ -1,3 +1,15 @@
+section.heroMenu {
+    padding: 0;
+    background-color: var(--green-900);
+    height: 50vh;
+    text-align: center;
+}
+
+section.heroMenu img{
+    object-fit: cover;
+    height: 100%;
+}
+
 .navScrollBox {
     background-color: var(--light);
     display: grid;
@@ -36,4 +48,68 @@
 
 div.sticky-top {
     top: 56px;
+}
+
+section.menu .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+section.menu .card {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    background-color: var(--green-100);
+}
+
+section.menu .card .cardContent {
+    display: flex;
+    flex-direction: column;
+}
+
+section.menu .card .card-title{
+    color: var(--green-900);
+}
+
+section.menu .card small{
+    color: var(--fgray);
+    text-align: justify;
+}
+
+section.menu .card small.serves{
+    width: fit-content;
+}
+
+section.menu .card span.price {
+    color: var(--green-900);
+    font-weight: 500;
+    position: absolute;
+    bottom: .5rem;
+}
+
+
+section.menu .card img {
+    inline-size: 40%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+@media (max-width: 991px) {
+    section.heroMenu {
+        height: 40vh;
+    }
+
+    section.heroMenu img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    section.heroMenu {
+        height: 25vh;
+    }
+
+    section.heroMenu img{
+        width: 100%;
+    }
 }
