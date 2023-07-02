@@ -1,0 +1,35 @@
+.loginCard {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.custom-input {
+  border: 1px solid var(--fgray);
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 20rem;
+}
+
+.custom-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--green-900);
+}
+
+.cardTitle {
+  font-size: 2rem;
+}
+
+.loginCard {
+  max-width: 400px;
+  height: 100%;
+  margin: 2rem auto;
+}
+
+.content {
+  min-height: 100vh;
+}
+
+.loginMessage {
+  font-size: 1.5rem;
+  color: var(--green-900);
+}
