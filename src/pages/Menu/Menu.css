@@ -60,6 +60,12 @@ section.menu .card {
     flex-direction: row-reverse;
     height: 100%;
     background-color: var(--green-100);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+section.menu .card:hover {
+    transform: scale(1.03);
 }
 
 section.menu .card .cardContent {
