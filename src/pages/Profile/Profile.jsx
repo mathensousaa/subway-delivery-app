@@ -4,17 +4,19 @@ import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Card from "react-bootstrap/Card";
 import "./Profile.css";
+import { useNavigate } from "react-router-dom";
 
 const AlreadyLoggedInPage = () => {
   const [userData, setUserData] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedUserData = localStorage.getItem("userData");
     if (storedUserData) {
       setUserData(JSON.parse(storedUserData));
     } else {
-      window.location.href = "/login";
+      navigate("/login");
     }
   }, []);
 
@@ -42,7 +44,7 @@ const AlreadyLoggedInPage = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("userData");
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   const handleChange = (event) => {
