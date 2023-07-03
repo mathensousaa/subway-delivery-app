@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Card from "react-bootstrap/Card";
+import {useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const LoginPage = () => {
@@ -14,13 +15,16 @@ const LoginPage = () => {
 
   const [loginMessage, setLoginMessage] = useState("");
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     const storedUserData = localStorage.getItem("userData");
     if (storedUserData) {
       const { name, email } = JSON.parse(storedUserData);
-      window.location.href = `/profile?name=${name}&email=${email}`;
+      const profileLink = `/profile?name=${name}&email=${email}`;
+      navigate(profileLink);
     }
-  }, []);
+  }, [navigate]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -47,7 +51,8 @@ const LoginPage = () => {
           email: "",
           password: "",
         });
-        window.location.href = `/profile?name=${user.name}&email=${user.email}`;
+        const profileLink = `/profile?name=${user.name}&email=${user.email}`;
+        navigate(profileLink);
       } else {
         setLoginMessage("Email ou senha inválidos.");
       }

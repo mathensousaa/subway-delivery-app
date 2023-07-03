@@ -52,7 +52,6 @@ function Header() {
                 Franquias
               </NavLink>
             </Nav>
-
             <PopoverComponent
               icon={faShoppingCart}
               content={
@@ -67,7 +66,7 @@ function Header() {
                 />
               }
             />
-
+            
             <PopoverComponent
               icon={faUser}
               content={
@@ -99,7 +98,6 @@ function Header() {
                 </>
               }
             />
-
             <a href="/menu">
               <Button
                 btnType="button"

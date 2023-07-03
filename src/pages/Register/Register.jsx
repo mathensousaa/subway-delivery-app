@@ -6,6 +6,7 @@ import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Card from "react-bootstrap/Card";
 import "./Register.css";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -27,9 +28,12 @@ const RegisterPage = () => {
     const storedUserData = localStorage.getItem("userData");
     if (storedUserData) {
       const { name, email } = JSON.parse(storedUserData);
-      window.location.href = `/profile?name=${name}&email=${email}`;
+      const profileLink = `/profile?name=${name}&email=${email}`;
+      navigate(profileLink);
     }
   }, []);
+
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -72,7 +76,8 @@ const RegisterPage = () => {
       confirmPassword: "",
     });
 
-    window.location.href = "/login";
+    const loginLink = "/login";
+    navigate(loginLink);
   };
 
   const [errorMessage, setErrorMessage] = useState("");
