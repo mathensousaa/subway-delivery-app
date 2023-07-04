@@ -1,0 +1,113 @@
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:hover {
+  opacity: 0.75;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-nav a:hover {
+  transition: 0.3s all;
+  color: var(--green-700);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--green-700);
+  font-weight: 500;
+}
+
+.btn-close:focus {
+  box-shadow: none;
+}
+
+.navbar-nav {
+  padding-right: 16rem;
+}
+
+.navBarIcons {
+  display: flex;
+}
+
+.navNavToggle{
+  justify-content: space-around;
+}
+
+.headerIcons button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--green-900);
+}
+
+.headerIcons button:hover {
+  color: var(--green-900);
+  background-color: transparent;
+}
+
+.headerIcons button:active {
+  color: var(--green-900);
+  background-color: transparent;
+}
+
+.headerIcons button:focus {
+  color: var(--green-900);
+  background-color: transparent;
+}
+
+button.deleteIcon {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color:crimson;
+}
+
+.headerIcons button:hover {
+  color: var(--green-900);
+  background-color: transparent;
+}
+
+.headerIcons button:active {
+  color: var(--green-900);
+  background-color: transparent;
+}
+
+.headerIcons button:focus {
+  color: var(--green-900);
+  background-color: transparent;
+}
+
+.active-style {
+  color: black;
+  font-weight: 300;
+}
+
+
+@media (max-width: 1399px) {
+  .navbar-nav {
+    padding-right: 10rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-nav {
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .borderBottom {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar-nav {
+    padding-bottom: 1rem;
+  }
+
+  .navBarIcons {
+    flex-direction: row-reverse;
+  }
+}
