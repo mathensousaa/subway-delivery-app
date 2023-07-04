@@ -23,7 +23,7 @@ const Home = () => {
         <Container className="d-flex flex-column align-items-center">
           <h3 className="heroText">Pedir seu Subway nunca foi tão facil!</h3>
           <span className="mb-3">Faça seu pedido pelo site!</span>
-          <Link to="/menu" className="link" activeClassName="active">
+          <Link to="/menu" className="link">
             <Button
               btnType="button"
               content="Peça aqui"
@@ -80,7 +80,7 @@ const Home = () => {
                 das marcas mais reconhecidas globalmente. Junte-se à equipe
                 hoje!
               </span>
-              <Link to="/menu" className="link" activeClassName="active">
+              <Link to="/menu" className="link">
                 <Button
                   btnType="button"
                   content="Seja um franqueado"

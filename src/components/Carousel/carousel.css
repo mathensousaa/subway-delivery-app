@@ -1,27 +1,27 @@
-.cardCarousel {
+.carousel .cardCarousel {
   flex-basis: 30%;
   max-width: 300px;
   min-width: 300px;
 }
 
-.image-container {
+.carousel .image-container {
   display: flex;
   justify-content: center;
   gap: 40px;
 }
 
-.cardCarousel img {
+.carousel .cardCarousel img {
   inline-size: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
-.card-title {
+.carousel .card-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.carousel-indicators {
+.carousel .carousel-indicators {
   display: none;
 }
