@@ -8,12 +8,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "../../components/Button/Button";
 import Carousel from "../../components/Carousel/Carousel";
 import Footer from "../../components/Footer/Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
       <Header />
-
       <section className="hero text-center">
         <picture>
           <source srcSet={Hero} media="(min-width: 992px)" />
@@ -23,7 +23,7 @@ const Home = () => {
         <Container className="d-flex flex-column align-items-center">
           <h3 className="heroText">Pedir seu Subway nunca foi tão facil!</h3>
           <span className="mb-3">Faça seu pedido pelo site!</span>
-          <a href="/menu">
+          <Link to="/menu" className="link" activeClassName="active">
             <Button
               btnType="button"
               content="Peça aqui"
@@ -36,7 +36,7 @@ const Home = () => {
               bgColorHover="var(--yellow-900)"
               borderHover="1px solid var(--yellow-900)"
             />
-          </a>
+          </Link>
         </Container>
       </section>
 
@@ -80,7 +80,7 @@ const Home = () => {
                 das marcas mais reconhecidas globalmente. Junte-se à equipe
                 hoje!
               </span>
-              <a href="/franchise">
+              <Link to="/menu" className="link" activeClassName="active">
                 <Button
                   btnType="button"
                   content="Seja um franqueado"
@@ -94,7 +94,7 @@ const Home = () => {
                   borderHover="1px solid var(--green-700)"
                   colorHover="var(--light)"
                 />
-              </a>
+              </Link>
             </Col>
           </Col>
           <Col

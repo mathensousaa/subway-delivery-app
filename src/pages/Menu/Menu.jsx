@@ -16,33 +16,28 @@ import {
   Cheeses,
   Seasons,
 } from "./importItems";
-import Subs from "../../components/Items/Subs/Subs"
+import Subs from "../../components/Items/Subs/Subs";
 import DrinksItem from "../../components/Items/Drinks/Drinks";
-
-const addToCart = (item) => {
-
-  const setCart = (localKey, list, setter) => {
-    const storedMenu = localStorage.getItem(localKey);
-    if (storedMenu) {
-      if (JSON.parse(storedMenu) != list) {
-        setter(list);
-        localStorage.setItem(localKey, JSON.stringify(list));
-      } else setter(JSON.parse(storedMenu));
-    } else {
-      setter(list);
-      localStorage.setItem(localKey, JSON.stringify(list));
-    }
-  };
-
-  setCart("ShoppingCart", cartItems, setShoppingCart)
-  setItem(item);
-  console.log("Item adicionado ao carrinho:", item);
-};
-
+import Toast from 'react-bootstrap/Toast';
 
 const SubwayMenu = () => {
-  const [item, setItem] = useState('')
+  const [item, setItem] = useState("");
+  const [ShoppingCart, setShoppingCart] = useState([]);
 
+  const addToCart = (item) => {
+    const storedCart = sessionStorage.getItem("ShoppingCart");
+    const cartItems = storedCart ? JSON.parse(storedCart) : [];
+    cartItems.push(item);
+    
+    if (storedCart) {
+      if (JSON.parse(storedCart) != cartItems) {
+        setShoppingCart(cartItems);
+        sessionStorage.setItem("ShoppingCart", JSON.stringify(cartItems));
+      } else setShoppingCart(JSON.parse(storedCart));
+    } else {
+      sessionStorage.setItem("ShoppingCart", JSON.stringify(cartItems));
+    }
+  };
 
   return (
     <div>

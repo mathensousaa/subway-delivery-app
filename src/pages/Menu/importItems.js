@@ -498,6 +498,79 @@ const SUBS = [
     },
   ];
 
+  const SUBSCarousel = [
+    { 
+      id: 0, 
+      name: "Sub B.M.T Italiano",
+      imgSub15: subs15img[0],
+    },
+    {
+      id: 1,
+      name: "Sub Carne Defumada com Cream Cheese",
+      imgSub15: subs15img[1],
+    },
+    {
+      id: 2,
+      name: "Sub Carne Seca com Cream Cheese",
+      imgSub15: subs15img[2],
+    },
+    {
+      id: 3,
+      name: "Sub Carne Supreme",
+      imgSub15: subs15img[3],
+    },
+    {
+      id: 4,
+      name: "Sub da Quebrada",
+      imgSub15: subs15img[4],
+    },
+    {
+      id: 5,
+      name: "Sub Frango",
+      imgSub15: subs15img[5],
+    },
+    {
+      id: 6,
+      name: "Sub Frango Defumado com Cream Cheese",
+      imgSub15: subs15img[6],
+    },
+    {
+      id: 7,
+      name: "Sub Frango Empanado",
+      imgSub15: subs15img[7],
+    },  
+    {
+      id: 8,
+      name: "Sub Frango Super Bacon",
+      imgSub15: subs15img[8],
+    },
+    {
+      id: 9,
+      name: "Sub Frango Teriyaki",
+      imgSub15: subs15img[9],
+    },
+    {
+      id: 10,
+      name: "Sub Steak Cheddar Cremoso",
+      imgSub15: subs15img[10],
+    },
+    {
+      id: 11,
+      name: "Sub Steak Churrasco",
+      imgSub15: subs15img[11],
+    },
+    {
+      id: 12,
+      name: "Sub Teriyaki Veg",
+      imgSub15: subs15img[12],
+    },
+    {
+      id: 13,
+      name: "Sub Vegetariano",
+      imgSub15: subs15img[13],
+    },
+  ];
+
 const Salads = [
     { 
       id: 0, 
@@ -916,6 +989,7 @@ export {
     saucesimg,
 
     SUBS,
+    SUBSCarousel,
     Salads,
     Desserts,
     Drinks,

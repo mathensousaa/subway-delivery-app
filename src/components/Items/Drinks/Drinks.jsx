@@ -88,6 +88,7 @@ const DrinksItem = (prop) => {
       quantity: quantity,
       itemPrice: totalPrice * quantity,
     };
+    console.log(selectedArrayItem);
     prop.handleAddToCart(selectedArrayItemCard);
     closeModal();
   };
