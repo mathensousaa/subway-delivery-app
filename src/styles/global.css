@@ -46,6 +46,8 @@
   color: var(--light);
 }
 
+
+
 @media (max-width: 768px) {
   :root {
     --p-section: 3rem 1rem;
@@ -58,6 +60,10 @@
 
   ::-webkit-scrollbar {
     height: 4px;
+  }
+
+  small {
+    font-size: .75rem;
   }
 }
 

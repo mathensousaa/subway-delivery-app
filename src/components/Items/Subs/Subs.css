@@ -1,0 +1,52 @@
+.modal-body {
+    padding: 0;
+}
+
+.modal-body div.itemSummary .summaryText{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.itemSelectionHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--green-100);
+    padding: 1rem;
+}
+
+.selectionText {
+    display: flex;
+    flex-direction: column;
+}
+
+.isRequired {
+    font-size: .65rem;
+    height: fit-content;
+    font-weight: 700;
+}
+
+.itemSelectionBody .form-check{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.itemSelectionBody .form-check label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+.itemSelectionBody .form-check img{
+    inline-size: 20%;
+}
+
+.itemSelectionBody .form-check input {
+    
+}
+

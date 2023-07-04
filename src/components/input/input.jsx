@@ -23,7 +23,7 @@ function Input (prop){
               placeholder={prop.placeholder}
               className={prop.formName}
               id={prop.inputId}
-              type={prop.type}
+              type={prop.inputType}
               style={inputStyles}
             />
             <Button 
