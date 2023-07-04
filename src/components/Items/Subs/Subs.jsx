@@ -258,7 +258,7 @@ const Subs = (prop) => {
         ))}
       </Row>
       {selectedArrayItem && (
-        <Modal show={modalOpen} fullscreen="md-down" onHide={closeModal}>
+        <Modal show={modalOpen} fullscreen="xl-down" onHide={closeModal}>
           <Modal.Header closeButton>
             <Modal.Title>{selectedArrayItem.name}</Modal.Title>
           </Modal.Header>

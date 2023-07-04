@@ -116,7 +116,7 @@ const AboutUs = () => {
               className="d-flex flex-column position-relative workfranchise p-0"
             >
               <img src={WorkWithUs} alt="Trabalho Conosco" />
-              <a href="/carrers" className="btn-overlay">
+              <a href="https://br.indeed.com/jobs?q=subway" className="btn-overlay">
                 <Button
                   btnType="button"
                   content="Trabalhe Conosco"
@@ -137,7 +137,7 @@ const AboutUs = () => {
               className="d-flex flex-column position-relative workfranchise p-0"
             >
               <img src={BeFranchisee} alt="Seja um Franqueado" />
-              <a href="/carrers" className="btn-overlay">
+              <a href="https://br.indeed.com/jobs?q=subway" className="btn-overlay">
                 <Button
                   btnType="button"
                   content="Seja um Franqueado"

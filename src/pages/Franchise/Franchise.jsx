@@ -36,7 +36,7 @@ const Franchise = () => {
               <h1 className="h1 mb-3 franchiseText">
                 Já se imaginou franqueado do Subway?
               </h1>
-              <a href="/carrers">
+              <a href="https://br.indeed.com/jobs?q=subway">
                 <Button
                   btnType="button"
                   content="Quero ser um franqueado"
@@ -158,7 +158,7 @@ const Franchise = () => {
             <Col xl={6} md={12} className="stepsCol mb-4">
               <h1 className="h1 steps">Próximas etapas</h1>
               <div className="stepBox">
-                <a href="/carrers">
+                <a href="https://br.indeed.com/jobs?q=subway">
                   <Button
                     btnType="button"
                     content="1. SOLICITAR UM CATÁLOGO"
@@ -179,7 +179,7 @@ const Franchise = () => {
                 </h3>
               </div>
               <div className="stepBox">
-                <a href="/carrers">
+                <a href="https://br.indeed.com/jobs?q=subway">
                   <Button
                     btnType="button"
                     content="2. CANDIDATAR-SE A PROPRIETÁRIO"
