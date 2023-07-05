@@ -24,9 +24,6 @@ O projeto *Subway* foi desenvolvido utilizando as seguintes tecnologias:
 - React: Biblioteca JavaScript de código aberto para construir interfaces de usuário.
 - Bootstrap: Biblioteca CSS de código aberto para desenvolvimento de interfaces responsivas e estilização rápida.
 
-## **Interface**
-
-
 ## **Desenvolvedores**
 
 <table>
@@ -45,4 +42,4 @@ Para configurar o ambiente de desenvolvimento e executar o site localmente, siga
 3. Navegue até o diretório raiz do projeto no terminal ou prompt de comando.
 4. Execute o comando **`npm install`** para instalar todas as dependências necessárias.
 5. Após a conclusão da instalação, execute o comando **`npm run dev`** para iniciar o servidor de desenvolvimento.
-6. Abra o navegador e acesse **`http://localhost:3000`** para visualizar o site.
+6. Abra o navegador e acesse **`http://localhost:5173`** para visualizar o site.
