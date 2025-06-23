@@ -1,6 +1,6 @@
 # **Subway**
 
-### Acesse o site por aqui: **[Subway Delivery App](https://subway-delivery-app.vercel.app)**.
+### Acesse o site por aqui: **[Subway Delivery App](https://subwaydelivery.vercel.app)**.
 
 Este repositório contém o código-fonte do site fictício para a rede de restaurantes Subway. O projeto foi desenvolvido por Matheus de Sousa e Felipe Brigagão como parte da disciplina de Desenvolvimento Web do IFSP.
 
